@@ -1,0 +1,246 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|c:\\users\\timeware068\\desktop\\webapiveiculos\\webapiveiculos\\webapiveiculos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|c:\\users\\timeware068\\desktop\\webapiveiculos\\webapiveiculos\\webapiveiculos\\models\\veiculoassistenciamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\models\\veiculoassistenciamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|c:\\users\\timeware068\\desktop\\webapiveiculos\\webapiveiculos\\webapiveiculos\\models\\grupoveiculomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\models\\grupoveiculomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|c:\\users\\timeware068\\desktop\\webapiveiculos\\webapiveiculos\\webapiveiculos\\models\\veiculomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\models\\veiculomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|c:\\users\\timeware068\\desktop\\webapiveiculos\\webapiveiculos\\webapiveiculos\\models\\empresaassistenciamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\models\\empresaassistenciamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|c:\\users\\timeware068\\desktop\\webapiveiculos\\webapiveiculos\\webapiveiculos\\models\\planoassistenciamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\models\\planoassistenciamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|c:\\users\\timeware068\\desktop\\webapiveiculos\\webapiveiculos\\webapiveiculos\\datacontext\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\datacontext\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|c:\\users\\timeware068\\desktop\\webapiveiculos\\webapiveiculos\\webapiveiculos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|c:\\users\\timeware068\\desktop\\webapiveiculos\\webapiveiculos\\webapiveiculos\\controllers\\veiculocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\controllers\\veiculocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|c:\\users\\timeware068\\desktop\\webapiveiculos\\webapiveiculos\\webapiveiculos\\models\\serviceresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\models\\serviceresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|c:\\users\\timeware068\\desktop\\webapiveiculos\\webapiveiculos\\webapiveiculos\\services\\veiculoservice\\veiculoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\services\\veiculoservice\\veiculoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|c:\\users\\timeware068\\desktop\\webapiveiculos\\webapiveiculos\\webapiveiculos\\services\\veiculoservice\\iveiculoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\services\\veiculoservice\\iveiculoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|c:\\users\\timeware068\\desktop\\webapiveiculos\\webapiveiculos\\webapiveiculos\\webapiveiculos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\webapiveiculos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|c:\\users\\timeware068\\desktop\\webapiveiculos\\webapiveiculos\\webapiveiculos\\migrations\\20250422142943_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\migrations\\20250422142943_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VeiculoModel.cs",
+              "DocumentMoniker": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Models\\VeiculoModel.cs",
+              "RelativeDocumentMoniker": "WebApiVeiculos\\Models\\VeiculoModel.cs",
+              "ToolTip": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Models\\VeiculoModel.cs",
+              "RelativeToolTip": "WebApiVeiculos\\Models\\VeiculoModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAIwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T12:34:24.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VeiculoAssistenciaModel.cs",
+              "DocumentMoniker": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Models\\VeiculoAssistenciaModel.cs",
+              "RelativeDocumentMoniker": "WebApiVeiculos\\Models\\VeiculoAssistenciaModel.cs",
+              "ToolTip": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Models\\VeiculoAssistenciaModel.cs",
+              "RelativeToolTip": "WebApiVeiculos\\Models\\VeiculoAssistenciaModel.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAmwBcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T13:09:54.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GrupoVeiculoModel.cs",
+              "DocumentMoniker": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Models\\GrupoVeiculoModel.cs",
+              "RelativeDocumentMoniker": "WebApiVeiculos\\Models\\GrupoVeiculoModel.cs",
+              "ToolTip": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Models\\GrupoVeiculoModel.cs",
+              "RelativeToolTip": "WebApiVeiculos\\Models\\GrupoVeiculoModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T12:52:13.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmpresaAssistenciaModel.cs",
+              "DocumentMoniker": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Models\\EmpresaAssistenciaModel.cs",
+              "RelativeDocumentMoniker": "WebApiVeiculos\\Models\\EmpresaAssistenciaModel.cs",
+              "ToolTip": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Models\\EmpresaAssistenciaModel.cs",
+              "RelativeToolTip": "WebApiVeiculos\\Models\\EmpresaAssistenciaModel.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAADwvw4AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T12:56:46.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\DataContext\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "WebApiVeiculos\\DataContext\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\DataContext\\ApplicationDbContext.cs",
+              "RelativeToolTip": "WebApiVeiculos\\DataContext\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAUwB0AAACAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T13:17:09.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApiVeiculos\\appsettings.json",
+              "ToolTip": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\appsettings.json",
+              "RelativeToolTip": "WebApiVeiculos\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-22T14:20:11.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlanoAssistenciaModel.cs",
+              "DocumentMoniker": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Models\\PlanoAssistenciaModel.cs",
+              "RelativeDocumentMoniker": "WebApiVeiculos\\Models\\PlanoAssistenciaModel.cs",
+              "ToolTip": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Models\\PlanoAssistenciaModel.cs",
+              "RelativeToolTip": "WebApiVeiculos\\Models\\PlanoAssistenciaModel.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAwwBYAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T13:01:41.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ServiceResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Models\\ServiceResponse.cs",
+              "RelativeDocumentMoniker": "WebApiVeiculos\\Models\\ServiceResponse.cs",
+              "ToolTip": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Models\\ServiceResponse.cs",
+              "RelativeToolTip": "WebApiVeiculos\\Models\\ServiceResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T13:13:54.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VeiculoController.cs",
+              "DocumentMoniker": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Controllers\\VeiculoController.cs",
+              "RelativeDocumentMoniker": "WebApiVeiculos\\Controllers\\VeiculoController.cs",
+              "ToolTip": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Controllers\\VeiculoController.cs",
+              "RelativeToolTip": "WebApiVeiculos\\Controllers\\VeiculoController.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAiwFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T14:25:20.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Program.cs",
+              "RelativeDocumentMoniker": "WebApiVeiculos\\Program.cs",
+              "ToolTip": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Program.cs",
+              "RelativeToolTip": "WebApiVeiculos\\Program.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAmwDwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T14:20:07.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IVeiculoService.cs",
+              "DocumentMoniker": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Services\\VeiculoService\\IVeiculoService.cs",
+              "RelativeDocumentMoniker": "WebApiVeiculos\\Services\\VeiculoService\\IVeiculoService.cs",
+              "ToolTip": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Services\\VeiculoService\\IVeiculoService.cs",
+              "RelativeToolTip": "WebApiVeiculos\\Services\\VeiculoService\\IVeiculoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T13:36:07.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "20250422142943_InitialMigration.cs",
+              "DocumentMoniker": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Migrations\\20250422142943_InitialMigration.cs",
+              "RelativeDocumentMoniker": "WebApiVeiculos\\Migrations\\20250422142943_InitialMigration.cs",
+              "ToolTip": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Migrations\\20250422142943_InitialMigration.cs",
+              "RelativeToolTip": "WebApiVeiculos\\Migrations\\20250422142943_InitialMigration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T14:29:44.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "VeiculoService.cs",
+              "DocumentMoniker": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Services\\VeiculoService\\VeiculoService.cs",
+              "RelativeDocumentMoniker": "WebApiVeiculos\\Services\\VeiculoService\\VeiculoService.cs",
+              "ToolTip": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Services\\VeiculoService\\VeiculoService.cs",
+              "RelativeToolTip": "WebApiVeiculos\\Services\\VeiculoService\\VeiculoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T13:57:06.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "WebApiVeiculos.csproj",
+              "DocumentMoniker": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos.csproj",
+              "RelativeDocumentMoniker": "WebApiVeiculos\\WebApiVeiculos.csproj",
+              "ToolTip": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos.csproj",
+              "RelativeToolTip": "WebApiVeiculos\\WebApiVeiculos.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-28T13:35:13.939Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
