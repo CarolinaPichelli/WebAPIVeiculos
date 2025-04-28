@@ -23,3 +23,7 @@ API em **.NET** para gerenciar veículos, grupos de veículos e assistências. U
    dotnet restore
    dotnet ef database update
    dotnet run
+3. Crie o banco utilizando docker-run
+<code>
+docker run --name mysql-veiculos -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=veiculosdatabase -e MYSQL_USER=usuario -e MYSQL_PASSWORD=123456 -p 3307:3306 -d mysql:latest
+</code>
