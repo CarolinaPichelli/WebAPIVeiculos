@@ -23,7 +23,8 @@ API em **.NET** para gerenciar veículos, grupos de veículos e assistências. U
    dotnet restore
    dotnet ef database update
    dotnet run
-3. Crie o banco utilizando docker-run
+   
+3. Crie o banco utilizando docker run:
 
 <pre>
 <code>
