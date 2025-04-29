@@ -5,6 +5,612 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/EmpresaAssistencia": {
+      "get": {
+        "tags": [
+          "EmpresaAssistencia"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EmpresaAssistenciaModel"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EmpresaAssistenciaModel"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EmpresaAssistenciaModel"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "EmpresaAssistencia"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmpresaAssistenciaModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmpresaAssistenciaModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmpresaAssistenciaModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmpresaAssistenciaModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmpresaAssistenciaModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmpresaAssistenciaModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/EmpresaAssistencia/{id}": {
+      "get": {
+        "tags": [
+          "EmpresaAssistencia"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmpresaAssistenciaModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmpresaAssistenciaModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmpresaAssistenciaModel"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "EmpresaAssistencia"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmpresaAssistenciaModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmpresaAssistenciaModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmpresaAssistenciaModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmpresaAssistenciaModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmpresaAssistenciaModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmpresaAssistenciaModel"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "EmpresaAssistencia"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/GrupoVeiculo": {
+      "get": {
+        "tags": [
+          "GrupoVeiculo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GrupoVeiculoModel"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GrupoVeiculoModel"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GrupoVeiculoModel"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "GrupoVeiculo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GrupoVeiculoModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GrupoVeiculoModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GrupoVeiculoModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GrupoVeiculoModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GrupoVeiculoModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GrupoVeiculoModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GrupoVeiculo/{id}": {
+      "get": {
+        "tags": [
+          "GrupoVeiculo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GrupoVeiculoModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GrupoVeiculoModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GrupoVeiculoModel"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "GrupoVeiculo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GrupoVeiculoModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GrupoVeiculoModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GrupoVeiculoModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GrupoVeiculoModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GrupoVeiculoModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GrupoVeiculoModel"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GrupoVeiculo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PlanoAssistencia": {
+      "get": {
+        "tags": [
+          "PlanoAssistencia"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PlanoAssistenciaModel"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PlanoAssistenciaModel"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PlanoAssistenciaModel"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "PlanoAssistencia"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlanoAssistenciaModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlanoAssistenciaModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlanoAssistenciaModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlanoAssistenciaModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlanoAssistenciaModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlanoAssistenciaModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PlanoAssistencia/{id}": {
+      "get": {
+        "tags": [
+          "PlanoAssistencia"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlanoAssistenciaModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlanoAssistenciaModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlanoAssistenciaModel"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "PlanoAssistencia"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlanoAssistenciaModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlanoAssistenciaModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlanoAssistenciaModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlanoAssistenciaModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlanoAssistenciaModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlanoAssistenciaModel"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "PlanoAssistencia"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Veiculo": {
       "get": {
         "tags": [
@@ -16,17 +622,26 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/VeiculoModelIEnumerableServiceResponse"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VeiculoModel"
+                  }
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/VeiculoModelIEnumerableServiceResponse"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VeiculoModel"
+                  }
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/VeiculoModelIEnumerableServiceResponse"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VeiculoModel"
+                  }
                 }
               }
             }
@@ -62,63 +677,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/VeiculoModelServiceResponse"
+                  "$ref": "#/components/schemas/VeiculoModel"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/VeiculoModelServiceResponse"
+                  "$ref": "#/components/schemas/VeiculoModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/VeiculoModelServiceResponse"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Veiculo"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/VeiculoModel"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/VeiculoModel"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/VeiculoModel"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/BooleanServiceResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BooleanServiceResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BooleanServiceResponse"
+                  "$ref": "#/components/schemas/VeiculoModel"
                 }
               }
             }
@@ -148,17 +717,74 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/VeiculoModelServiceResponse"
+                  "$ref": "#/components/schemas/VeiculoModel"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/VeiculoModelServiceResponse"
+                  "$ref": "#/components/schemas/VeiculoModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/VeiculoModelServiceResponse"
+                  "$ref": "#/components/schemas/VeiculoModel"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Veiculo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VeiculoModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VeiculoModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VeiculoModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VeiculoModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VeiculoModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VeiculoModel"
                 }
               }
             }
@@ -182,21 +808,88 @@
         ],
         "responses": {
           "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/VeiculoAssistencia": {
+      "get": {
+        "tags": [
+          "VeiculoAssistencia"
+        ],
+        "responses": {
+          "200": {
             "description": "OK",
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/BooleanServiceResponse"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VeiculoAssistenciaModel"
+                  }
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BooleanServiceResponse"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VeiculoAssistenciaModel"
+                  }
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BooleanServiceResponse"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VeiculoAssistenciaModel"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "VeiculoAssistencia"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VeiculoAssistenciaModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VeiculoAssistenciaModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VeiculoAssistenciaModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VeiculoAssistenciaModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VeiculoAssistenciaModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VeiculoAssistenciaModel"
                 }
               }
             }
@@ -204,14 +897,14 @@
         }
       }
     },
-    "/api/Veiculo/grupo/{grupoId}": {
+    "/api/VeiculoAssistencia/{id}": {
       "get": {
         "tags": [
-          "Veiculo"
+          "VeiculoAssistencia"
         ],
         "parameters": [
           {
-            "name": "grupoId",
+            "name": "id",
             "in": "path",
             "required": true,
             "schema": {
@@ -226,20 +919,98 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/VeiculoModelIEnumerableServiceResponse"
+                  "$ref": "#/components/schemas/VeiculoAssistenciaModel"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/VeiculoModelIEnumerableServiceResponse"
+                  "$ref": "#/components/schemas/VeiculoAssistenciaModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/VeiculoModelIEnumerableServiceResponse"
+                  "$ref": "#/components/schemas/VeiculoAssistenciaModel"
                 }
               }
             }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "VeiculoAssistencia"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VeiculoAssistenciaModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VeiculoAssistenciaModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VeiculoAssistenciaModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VeiculoAssistenciaModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VeiculoAssistenciaModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VeiculoAssistenciaModel"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "VeiculoAssistencia"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -247,27 +1018,10 @@
   },
   "components": {
     "schemas": {
-      "BooleanServiceResponse": {
-        "type": "object",
-        "properties": {
-          "dados": {
-            "type": "boolean"
-          },
-          "sucesso": {
-            "type": "boolean"
-          },
-          "mensagem": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "EmpresaAssistenciaModel": {
         "required": [
           "endereco",
-          "nome",
-          "planos"
+          "nome"
         ],
         "type": "object",
         "properties": {
@@ -280,8 +1034,8 @@
             "type": "string"
           },
           "endereco": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "planos": {
             "type": "array",
@@ -325,10 +1079,7 @@
       "PlanoAssistenciaModel": {
         "required": [
           "cobertura",
-          "descricao",
-          "empresaAssistencia",
-          "empresaId",
-          "veiculoAssistencia"
+          "descricao"
         ],
         "type": "object",
         "properties": {
@@ -348,10 +1099,10 @@
             "type": "string"
           },
           "cobertura": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
-          "veiculoAssistencia": {
+          "veiculoAssistencias": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/VeiculoAssistenciaModel"
@@ -363,7 +1114,6 @@
       },
       "VeiculoAssistenciaModel": {
         "required": [
-          "id",
           "planoId",
           "veiculoId"
         ],
@@ -418,47 +1168,11 @@
           "grupoVeiculo": {
             "$ref": "#/components/schemas/GrupoVeiculoModel"
           },
-          "veiculoAssistencia": {
+          "veiculoAssistencias": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/VeiculoAssistenciaModel"
             },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "VeiculoModelIEnumerableServiceResponse": {
-        "type": "object",
-        "properties": {
-          "dados": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/VeiculoModel"
-            },
-            "nullable": true
-          },
-          "sucesso": {
-            "type": "boolean"
-          },
-          "mensagem": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "VeiculoModelServiceResponse": {
-        "type": "object",
-        "properties": {
-          "dados": {
-            "$ref": "#/components/schemas/VeiculoModel"
-          },
-          "sucesso": {
-            "type": "boolean"
-          },
-          "mensagem": {
-            "type": "string",
             "nullable": true
           }
         },

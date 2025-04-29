@@ -1,24 +1,23 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using WebApiVeiculos.Models;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApiVeiculos.Models
 {
     public class VeiculoAssistenciaModel
     {
         [Key]
-        public required int id { get; set; }
+        public int Id { get; set; } // Opcional: ou use chave composta abaixo no DbContext
 
         [Required]
-        public required int veiculoId { get; set; }
+        public int VeiculoId { get; set; }
 
-        [ForeignKey("veiculoId")]
-        public VeiculoModel Veiculo { get; set; }  // Pode ser opcional se você não precisar do objeto completo aqui.
+        [ForeignKey("VeiculoId")]
+        public VeiculoModel Veiculo { get; set; }
 
         [Required]
-        public int planoId { get; set; }
+        public int PlanoId { get; set; }
 
-        [ForeignKey("planoId")]
-        public PlanoAssistenciaModel PlanoAssistencia { get; set; }  // Pode ser opcional se você não precisar do objeto completo aqui.
+        [ForeignKey("PlanoId")]
+        public PlanoAssistenciaModel PlanoAssistencia { get; set; }
     }
 }

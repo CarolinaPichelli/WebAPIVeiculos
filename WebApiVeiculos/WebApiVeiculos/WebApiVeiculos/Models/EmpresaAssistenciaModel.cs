@@ -1,18 +1,18 @@
-﻿using System.ComponentModel.DataAnnotations; //anotações para validação de dados (Ex.: Key, Required...)
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace WebApiVeiculos.Models
 {
     public class EmpresaAssistenciaModel
     {
         [Key]
-        public int id { get; set; }
+        public int Id { get; set; }
 
         [Required(ErrorMessage = "Preencha com o nome")]
-        public required string nome { get; set; }
-        
-        public required string endereco { get; set; }
+        public string Nome { get; set; }
 
-        public required ICollection<PlanoAssistenciaModel> Planos { get; set; } //maiusculo ou minusculo? pq as variaveis tao minusculas
+        [Required]
+        public string Endereco { get; set; }
 
+        public ICollection<PlanoAssistenciaModel> Planos { get; set; } = new List<PlanoAssistenciaModel>();
     }
 }

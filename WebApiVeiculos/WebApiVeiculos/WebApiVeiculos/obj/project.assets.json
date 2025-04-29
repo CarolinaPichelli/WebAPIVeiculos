@@ -3384,11 +3384,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos.csproj",
+      "projectUniqueName": "C:\\Users\\Timeware068\\Desktop\\apiveiculos\\WebAPIVeiculos\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos.csproj",
       "projectName": "WebApiVeiculos",
-      "projectPath": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos.csproj",
+      "projectPath": "C:\\Users\\Timeware068\\Desktop\\apiveiculos\\WebAPIVeiculos\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos.csproj",
       "packagesPath": "C:\\Users\\Timeware068\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Timeware068\\Desktop\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\obj\\",
+      "outputPath": "C:\\Users\\Timeware068\\Desktop\\apiveiculos\\WebAPIVeiculos\\WebApiVeiculos\\WebApiVeiculos\\WebApiVeiculos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

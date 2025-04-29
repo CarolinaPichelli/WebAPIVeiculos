@@ -2,6 +2,12 @@ using Microsoft.EntityFrameworkCore;
 using Serilog;
 using WebApiVeiculos.DataContext;
 using WebApiVeiculos.Services;
+using WebApiVeiculos.Services.GrupoVeiculo;
+using WebApiVeiculos.Services.Veiculo;
+using WebApiVeiculos.Services.EmpresaAssistencia;
+using WebApiVeiculos.Services.PlanoAssistencia;
+using WebApiVeiculos.Services.VeiculoAssistencia;
+using WebApiVeiculos.Services.VeiculoAssistenciaService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,14 +15,13 @@ var builder = WebApplication.CreateBuilder(args);
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
-    .Enrich.FromLogContext() // Boa prática: adicionar contexto
+    .Enrich.FromLogContext()
     .CreateLogger();
 
 try
 {
     Log.Information("Iniciando a aplicação...");
 
-    // Aplica o Serilog ao Host
     builder.Host.UseSerilog();
 
     // Adiciona os serviços ao container
@@ -24,10 +29,14 @@ try
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
 
-    // Registra o IVeiculoService e sua implementação VeiculoService
+    // Registra todos os serviços
     builder.Services.AddScoped<IVeiculoService, VeiculoService>();
+    builder.Services.AddScoped<IGrupoVeiculoService, GrupoVeiculoService>();
+    builder.Services.AddScoped<IEmpresaAssistenciaService, EmpresaAssistenciaService>();
+    builder.Services.AddScoped<IPlanoAssistenciaService, PlanoAssistenciaService>();
+    builder.Services.AddScoped<IVeiculoAssistenciaService, VeiculoAssistenciaService>();
 
-    // Configura o DbContext com a string de conexão
+    // Configura o DbContext com MySQL
     builder.Services.AddDbContext<ApplicationDbContext>(options =>
         options.UseMySql(
             builder.Configuration.GetConnectionString("DefaultConnection"),
@@ -37,7 +46,6 @@ try
 
     var app = builder.Build();
 
-    // Configuração do pipeline HTTP
     if (app.Environment.IsDevelopment())
     {
         app.UseSwagger();

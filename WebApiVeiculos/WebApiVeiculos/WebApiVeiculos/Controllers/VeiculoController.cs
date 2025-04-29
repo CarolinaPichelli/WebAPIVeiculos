@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebApiVeiculos.Models;
 using WebApiVeiculos.Services;
+using Serilog;
+using WebApiVeiculos.Services.Veiculo;
+using ILogger = Serilog.ILogger;
 
 namespace WebApiVeiculos.Controllers
 {
@@ -9,82 +12,103 @@ namespace WebApiVeiculos.Controllers
     public class VeiculoController : ControllerBase
     {
         private readonly IVeiculoService _veiculoService;
+        private readonly ILogger _logger;
 
         public VeiculoController(IVeiculoService veiculoService)
         {
             _veiculoService = veiculoService;
+            _logger = Log.ForContext<VeiculoController>();
         }
 
-        // GET: api/veiculo
         [HttpGet]
-        public async Task<ActionResult<ServiceResponse<IEnumerable<VeiculoModel>>>> GetAllAsync()
+        public async Task<ActionResult<IEnumerable<VeiculoModel>>> GetTodos()
         {
-            var result = await _veiculoService.GetAllAsync();
-            if (result.sucesso)
+            try
             {
-                return Ok(result);
+                var veiculos = await _veiculoService.BuscarTodosAsync();
+                return Ok(veiculos);
             }
-            return BadRequest(result);
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Erro ao buscar todos os veículos");
+                return StatusCode(500, "Erro interno ao buscar veículos");
+            }
         }
 
-        // GET: api/veiculo/{id}
         [HttpGet("{id}")]
-        public async Task<ActionResult<ServiceResponse<VeiculoModel>>> GetByIdAsync(int id)
+        public async Task<ActionResult<VeiculoModel>> GetPorId(int id)
         {
-            var result = await _veiculoService.GetByIdAsync(id);
-            if (result.sucesso)
+            try
             {
-                return Ok(result);
+                var veiculo = await _veiculoService.BuscarPorIdAsync(id);
+                if (veiculo == null)
+                {
+                    return NotFound($"Veículo com ID {id} não encontrado");
+                }
+                return Ok(veiculo);
             }
-            return NotFound(result);
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Erro ao buscar veículo por ID: {Id}", id);
+                return StatusCode(500, "Erro interno ao buscar veículo");
+            }
         }
 
-        // POST: api/veiculo
         [HttpPost]
-        public async Task<ActionResult<ServiceResponse<VeiculoModel>>> CreateAsync(VeiculoModel veiculo)
+        public async Task<ActionResult<VeiculoModel>> Criar(VeiculoModel veiculo)
         {
-            var result = await _veiculoService.CreateAsync(veiculo);
-            if (result.sucesso)
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            try
             {
-                return CreatedAtAction(nameof(GetByIdAsync), new { id = veiculo.id }, result);
+                var novoVeiculo = await _veiculoService.CriarAsync(veiculo);
+                return CreatedAtAction(nameof(GetPorId), new { id = novoVeiculo.Id }, novoVeiculo);
             }
-            return BadRequest(result);
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Erro ao criar veículo");
+                return StatusCode(500, "Erro interno ao criar veículo");
+            }
         }
 
-        // PUT: api/veiculo
-        [HttpPut]
-        public async Task<ActionResult<ServiceResponse<bool>>> UpdateAsync(VeiculoModel veiculo)
+        [HttpPut("{id}")]
+        public async Task<ActionResult<VeiculoModel>> Atualizar(int id, VeiculoModel veiculo)
         {
-            var result = await _veiculoService.UpdateAsync(veiculo);
-            if (result.sucesso)
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            try
             {
-                return Ok(result);
+                var veiculoAtualizado = await _veiculoService.AtualizarAsync(id, veiculo);
+                if (veiculoAtualizado == null)
+                    return NotFound($"Veículo com ID {id} não encontrado");
+
+                return Ok(veiculoAtualizado);
             }
-            return BadRequest(result);
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Erro ao atualizar veículo com ID: {Id}", id);
+                return StatusCode(500, "Erro interno ao atualizar veículo");
+            }
         }
 
-        // DELETE: api/veiculo/{id}
         [HttpDelete("{id}")]
-        public async Task<ActionResult<ServiceResponse<bool>>> DeleteAsync(int id)
+        public async Task<IActionResult> Deletar(int id)
         {
-            var result = await _veiculoService.DeleteAsync(id);
-            if (result.sucesso)
+            try
             {
-                return Ok(result);
-            }
-            return NotFound(result);
-        }
+                var resultado = await _veiculoService.DeletarAsync(id);
+                if (!resultado)
+                    return NotFound($"Veículo com ID {id} não encontrado");
 
-        // GET: api/veiculo/grupo/{grupoId}
-        [HttpGet("grupo/{grupoId}")]
-        public async Task<ActionResult<ServiceResponse<IEnumerable<VeiculoModel>>>> GetByGrupoAsync(int grupoId)
-        {
-            var result = await _veiculoService.GetByGrupoAsync(grupoId);
-            if (result.sucesso)
-            {
-                return Ok(result);
+                return NoContent();
             }
-            return NotFound(result);
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Erro ao deletar veículo com ID: {Id}", id);
+                return StatusCode(500, "Erro interno ao deletar veículo");
+            }
         }
     }
 }

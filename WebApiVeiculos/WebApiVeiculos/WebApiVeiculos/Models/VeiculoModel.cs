@@ -6,26 +6,21 @@ namespace WebApiVeiculos.Models
     public class VeiculoModel
     {
         [Key]
-        public int id { get; set; }
+        public int Id { get; set; }
 
         [Required(ErrorMessage = "Preencha o modelo do veículo")]
-        public string modelo { get; set; }
+        public string Modelo { get; set; }
 
         [Required(ErrorMessage = "Preencha a placa do veículo")]
         [StringLength(10, ErrorMessage = "A placa do veículo deve conter até 10 caracteres")]
-        public string placa { get; set; }
+        public string Placa { get; set; }
 
         [Required]
-        public int grupoId { get; set; }
+        public int GrupoId { get; set; }
 
-        [ForeignKey("grupoId")]
-        public GrupoVeiculoModel GrupoVeiculo { get; set; } // A propriedade não deve ser "required" aqui
+        [ForeignKey("GrupoId")]
+        public GrupoVeiculoModel GrupoVeiculo { get; set; }
 
-        public ICollection<VeiculoAssistenciaModel> VeiculoAssistencia { get; set; } // Essa coleção deve ser inicializada, caso contrário, pode causar erros
-
-        public VeiculoModel()
-        {
-            VeiculoAssistencia = new List<VeiculoAssistenciaModel>(); // Inicializando a coleção para evitar problemas
-        }
+        public ICollection<VeiculoAssistenciaModel> VeiculoAssistencias { get; set; } = new List<VeiculoAssistenciaModel>();
     }
 }

@@ -2,183 +2,123 @@
 using Serilog;
 using WebApiVeiculos.DataContext;
 using WebApiVeiculos.Models;
+using WebApiVeiculos.Services.Veiculo;
+using ILogger = Serilog.ILogger;
 
 namespace WebApiVeiculos.Services
 {
     public class VeiculoService : IVeiculoService
     {
         private readonly ApplicationDbContext _context;
-        private readonly ILogger<VeiculoService> _logger;
+        private readonly ILogger _logger;
 
-        public VeiculoService(ApplicationDbContext context, ILogger<VeiculoService> logger)
+        public VeiculoService(ApplicationDbContext context)
         {
             _context = context;
-            _logger = logger;  // Injeção do ILogger
+            _logger = Log.ForContext<VeiculoService>();
         }
 
-        public async Task<ServiceResponse<IEnumerable<VeiculoModel>>> GetAllAsync()
+        public async Task<IEnumerable<VeiculoModel>> BuscarTodosAsync()
         {
-            var response = new ServiceResponse<IEnumerable<VeiculoModel>>();
             try
             {
-                _logger.LogInformation("Tentando recuperar todos os veículos.");
-                response.dados = await _context.Veiculos.Include(v => v.GrupoVeiculo).ToListAsync();
-                response.sucesso = true;
-                response.mensagem = "Veículos encontrados com sucesso.";
-                _logger.LogInformation("Veículos recuperados com sucesso.");
+                return await _context.Veiculos
+                    .Include(v => v.GrupoVeiculo)
+                    .Include(v => v.VeiculoAssistencias)
+                        .ThenInclude(va => va.PlanoAssistencia)
+                    .ToListAsync();
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Erro ao recuperar veículos.");
-                response.sucesso = false;
-                response.mensagem = $"Erro ao recuperar veículos: {ex.Message}";
+                _logger.Error(ex, "Erro ao buscar todos os veículos");
+                throw;
             }
-            return response;
         }
 
-        public async Task<ServiceResponse<VeiculoModel>> GetByIdAsync(int id)
+        public async Task<VeiculoModel?> BuscarPorIdAsync(int id)
         {
-            var response = new ServiceResponse<VeiculoModel>();
             try
             {
-                _logger.LogInformation("Tentando recuperar veículo com ID {VeiculoId}.", id);
-                var veiculo = await _context.Veiculos.Include(v => v.GrupoVeiculo).FirstOrDefaultAsync(v => v.id == id);
-
-                if (veiculo == null)
-                {
-                    _logger.LogWarning("Veículo com ID {VeiculoId} não encontrado.", id);
-                    response.sucesso = false;
-                    response.mensagem = "Veículo não encontrado.";
-                }
-                else
-                {
-                    response.dados = veiculo;
-                    response.sucesso = true;
-                    response.mensagem = "Veículo encontrado com sucesso.";
-                    _logger.LogInformation("Veículo com ID {VeiculoId} encontrado.", id);
-                }
+                return await _context.Veiculos
+                    .Include(v => v.GrupoVeiculo)
+                    .Include(v => v.VeiculoAssistencias)
+                        .ThenInclude(va => va.PlanoAssistencia)
+                    .FirstOrDefaultAsync(v => v.Id == id);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Erro ao recuperar o veículo com ID {VeiculoId}.", id);
-                response.sucesso = false;
-                response.mensagem = $"Erro ao recuperar o veículo: {ex.Message}";
+                _logger.Error(ex, "Erro ao buscar veículo por ID: {Id}", id);
+                throw;
             }
-            return response;
         }
 
-        public async Task<ServiceResponse<VeiculoModel>> CreateAsync(VeiculoModel veiculo)
+        public async Task<VeiculoModel> CriarAsync(VeiculoModel veiculo)
         {
-            var response = new ServiceResponse<VeiculoModel>();
             try
             {
-                _logger.LogInformation("Tentando criar um novo veículo.");
                 _context.Veiculos.Add(veiculo);
                 await _context.SaveChangesAsync();
-
-                response.dados = veiculo;
-                response.sucesso = true;
-                response.mensagem = "Veículo criado com sucesso.";
-                _logger.LogInformation("Veículo criado com sucesso: {VeiculoId}.", veiculo.id);
+                _logger.Information("Veículo criado com sucesso: {@Veiculo}", veiculo);
+                return veiculo;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Erro ao criar veículo.");
-                response.sucesso = false;
-                response.mensagem = $"Erro ao criar veículo: {ex.Message}";
+                _logger.Error(ex, "Erro ao criar veículo");
+                throw;
             }
-            return response;
         }
 
-        public async Task<ServiceResponse<bool>> UpdateAsync(VeiculoModel veiculo)
+        public async Task<VeiculoModel?> AtualizarAsync(int id, VeiculoModel veiculo)
         {
-            var response = new ServiceResponse<bool>();
             try
             {
-                _logger.LogInformation("Tentando atualizar o veículo com ID {VeiculoId}.", veiculo.id);
-                _context.Veiculos.Update(veiculo);
+                var veiculoExistente = await _context.Veiculos.FindAsync(id);
+
+                if (veiculoExistente == null)
+                {
+                    _logger.Warning("Tentativa de atualizar veículo inexistente com ID: {Id}", id);
+                    return null;
+                }
+
+                veiculoExistente.Modelo = veiculo.Modelo;
+                veiculoExistente.Placa = veiculo.Placa;
+                veiculoExistente.GrupoId = veiculo.GrupoId;
+
                 await _context.SaveChangesAsync();
 
-                response.dados = true;
-                response.sucesso = true;
-                response.mensagem = "Veículo atualizado com sucesso.";
-                _logger.LogInformation("Veículo com ID {VeiculoId} atualizado com sucesso.", veiculo.id);
+                _logger.Information("Veículo atualizado: {@Veiculo}", veiculoExistente);
+                return veiculoExistente;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Erro ao atualizar o veículo com ID {VeiculoId}.", veiculo.id);
-                response.dados = false;
-                response.sucesso = false;
-                response.mensagem = $"Erro ao atualizar veículo: {ex.Message}";
+                _logger.Error(ex, "Erro ao atualizar veículo com ID: {Id}", id);
+                throw;
             }
-            return response;
         }
 
-        public async Task<ServiceResponse<bool>> DeleteAsync(int id)
+        public async Task<bool> DeletarAsync(int id)
         {
-            var response = new ServiceResponse<bool>();
             try
             {
-                _logger.LogInformation("Tentando deletar o veículo com ID {VeiculoId}.", id);
                 var veiculo = await _context.Veiculos.FindAsync(id);
+
                 if (veiculo == null)
                 {
-                    _logger.LogWarning("Veículo com ID {VeiculoId} não encontrado.", id);
-                    response.sucesso = false;
-                    response.mensagem = "Veículo não encontrado.";
-                    response.dados = false;
-                    return response;
+                    _logger.Warning("Tentativa de deletar veículo inexistente com ID: {Id}", id);
+                    return false;
                 }
 
                 _context.Veiculos.Remove(veiculo);
                 await _context.SaveChangesAsync();
 
-                response.sucesso = true;
-                response.mensagem = "Veículo deletado com sucesso.";
-                response.dados = true;
-                _logger.LogInformation("Veículo com ID {VeiculoId} deletado com sucesso.", id);
+                _logger.Information("Veículo deletado com sucesso: {@Veiculo}", veiculo);
+                return true;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Erro ao deletar o veículo com ID {VeiculoId}.", id);
-                response.sucesso = false;
-                response.mensagem = $"Erro ao deletar veículo: {ex.Message}";
-                response.dados = false;
+                _logger.Error(ex, "Erro ao deletar veículo com ID: {Id}", id);
+                throw;
             }
-            return response;
-        }
-
-        public async Task<ServiceResponse<IEnumerable<VeiculoModel>>> GetByGrupoAsync(int grupoId)
-        {
-            var response = new ServiceResponse<IEnumerable<VeiculoModel>>();
-            try
-            {
-                _logger.LogInformation("Tentando recuperar veículos do grupo com ID {GrupoId}.", grupoId);
-                response.dados = await _context.Veiculos
-                    .Where(v => v.grupoId == grupoId)
-                    .Include(v => v.GrupoVeiculo)
-                    .ToListAsync();
-
-                if (response.dados.Any())
-                {
-                    response.sucesso = true;
-                    response.mensagem = "Veículos do grupo encontrados com sucesso.";
-                    _logger.LogInformation("Veículos do grupo com ID {GrupoId} encontrados.", grupoId);
-                }
-                else
-                {
-                    response.sucesso = false;
-                    response.mensagem = "Nenhum veículo encontrado para este grupo.";
-                    _logger.LogWarning("Nenhum veículo encontrado para o grupo com ID {GrupoId}.", grupoId);
-                }
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Erro ao recuperar veículos do grupo com ID {GrupoId}.", grupoId);
-                response.sucesso = false;
-                response.mensagem = $"Erro ao recuperar veículos do grupo: {ex.Message}";
-            }
-            return response;
         }
     }
 }

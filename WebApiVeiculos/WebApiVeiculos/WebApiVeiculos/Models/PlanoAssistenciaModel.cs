@@ -1,25 +1,24 @@
-﻿using System.ComponentModel.DataAnnotations; //anotações para validação de dados (Ex.: Key, Required...)
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApiVeiculos.Models
 {
     public class PlanoAssistenciaModel
     {
-
         [Key]
-        public int id { get; set; }
+        public int Id { get; set; }
 
-        [Required]
-        public int empresaId { get; set; }
+       public int EmpresaId { get; set; }
 
-        [ForeignKey("empresaId")]
-        public required EmpresaAssistenciaModel EmpresaAssistencia { get; set; }
+        [ForeignKey("EmpresaId")]
+        public EmpresaAssistenciaModel EmpresaAssistencia { get; set; }
 
         [Required(ErrorMessage = "Preencha o campo de descrição")]
-        public required string descricao { get; set; }
+        public string Descricao { get; set; }
 
-        public required string cobertura { get; set; }
+        [Required]
+        public string Cobertura { get; set; }
 
-        public required ICollection<VeiculoAssistenciaModel> VeiculoAssistencia { get; set; }
+        public ICollection<VeiculoAssistenciaModel> VeiculoAssistencias { get; set; } = new List<VeiculoAssistenciaModel>();
     }
 }

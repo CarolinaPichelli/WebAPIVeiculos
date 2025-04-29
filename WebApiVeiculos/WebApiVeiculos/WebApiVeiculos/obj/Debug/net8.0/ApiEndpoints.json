@@ -1,7 +1,364 @@
 [
   {
+    "ContainingType": "WebApiVeiculos.Controllers.EmpresaAssistenciaController",
+    "Method": "GetTodos",
+    "RelativePath": "api/EmpresaAssistencia",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApiVeiculos.Models.EmpresaAssistenciaModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiVeiculos.Controllers.EmpresaAssistenciaController",
+    "Method": "Criar",
+    "RelativePath": "api/EmpresaAssistencia",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "WebApiVeiculos.Models.EmpresaAssistenciaModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApiVeiculos.Models.EmpresaAssistenciaModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiVeiculos.Controllers.EmpresaAssistenciaController",
+    "Method": "GetPorId",
+    "RelativePath": "api/EmpresaAssistencia/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApiVeiculos.Models.EmpresaAssistenciaModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiVeiculos.Controllers.EmpresaAssistenciaController",
+    "Method": "Atualizar",
+    "RelativePath": "api/EmpresaAssistencia/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "empresa",
+        "Type": "WebApiVeiculos.Models.EmpresaAssistenciaModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApiVeiculos.Models.EmpresaAssistenciaModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiVeiculos.Controllers.EmpresaAssistenciaController",
+    "Method": "Deletar",
+    "RelativePath": "api/EmpresaAssistencia/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiVeiculos.Controllers.GrupoVeiculoController",
+    "Method": "GetTodos",
+    "RelativePath": "api/GrupoVeiculo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApiVeiculos.Models.GrupoVeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiVeiculos.Controllers.GrupoVeiculoController",
+    "Method": "Criar",
+    "RelativePath": "api/GrupoVeiculo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "grupo",
+        "Type": "WebApiVeiculos.Models.GrupoVeiculoModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApiVeiculos.Models.GrupoVeiculoModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiVeiculos.Controllers.GrupoVeiculoController",
+    "Method": "GetPorId",
+    "RelativePath": "api/GrupoVeiculo/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApiVeiculos.Models.GrupoVeiculoModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiVeiculos.Controllers.GrupoVeiculoController",
+    "Method": "Atualizar",
+    "RelativePath": "api/GrupoVeiculo/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "grupo",
+        "Type": "WebApiVeiculos.Models.GrupoVeiculoModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApiVeiculos.Models.GrupoVeiculoModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiVeiculos.Controllers.GrupoVeiculoController",
+    "Method": "Deletar",
+    "RelativePath": "api/GrupoVeiculo/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiVeiculos.Controllers.PlanoAssistenciaController",
+    "Method": "GetTodos",
+    "RelativePath": "api/PlanoAssistencia",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApiVeiculos.Models.PlanoAssistenciaModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiVeiculos.Controllers.PlanoAssistenciaController",
+    "Method": "Criar",
+    "RelativePath": "api/PlanoAssistencia",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "plano",
+        "Type": "WebApiVeiculos.Models.PlanoAssistenciaModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApiVeiculos.Models.PlanoAssistenciaModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiVeiculos.Controllers.PlanoAssistenciaController",
+    "Method": "GetPorId",
+    "RelativePath": "api/PlanoAssistencia/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApiVeiculos.Models.PlanoAssistenciaModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiVeiculos.Controllers.PlanoAssistenciaController",
+    "Method": "Atualizar",
+    "RelativePath": "api/PlanoAssistencia/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "plano",
+        "Type": "WebApiVeiculos.Models.PlanoAssistenciaModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApiVeiculos.Models.PlanoAssistenciaModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiVeiculos.Controllers.PlanoAssistenciaController",
+    "Method": "Deletar",
+    "RelativePath": "api/PlanoAssistencia/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebApiVeiculos.Controllers.VeiculoController",
-    "Method": "GetAllAsync",
+    "Method": "GetTodos",
     "RelativePath": "api/Veiculo",
     "HttpMethod": "GET",
     "IsController": true,
@@ -9,7 +366,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "WebApiVeiculos.Models.ServiceResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -21,7 +378,7 @@
   },
   {
     "ContainingType": "WebApiVeiculos.Controllers.VeiculoController",
-    "Method": "CreateAsync",
+    "Method": "Criar",
     "RelativePath": "api/Veiculo",
     "HttpMethod": "POST",
     "IsController": true,
@@ -35,33 +392,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "WebApiVeiculos.Models.ServiceResponse\u00601[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "WebApiVeiculos.Controllers.VeiculoController",
-    "Method": "UpdateAsync",
-    "RelativePath": "api/Veiculo",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "veiculo",
         "Type": "WebApiVeiculos.Models.VeiculoModel",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "WebApiVeiculos.Models.ServiceResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -73,7 +404,7 @@
   },
   {
     "ContainingType": "WebApiVeiculos.Controllers.VeiculoController",
-    "Method": "GetByIdAsync",
+    "Method": "GetPorId",
     "RelativePath": "api/Veiculo/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -87,7 +418,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "WebApiVeiculos.Models.ServiceResponse\u00601[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "WebApiVeiculos.Models.VeiculoModel",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -99,7 +430,38 @@
   },
   {
     "ContainingType": "WebApiVeiculos.Controllers.VeiculoController",
-    "Method": "DeleteAsync",
+    "Method": "Atualizar",
+    "RelativePath": "api/Veiculo/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "veiculo",
+        "Type": "WebApiVeiculos.Models.VeiculoModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApiVeiculos.Models.VeiculoModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiVeiculos.Controllers.VeiculoController",
+    "Method": "Deletar",
     "RelativePath": "api/Veiculo/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -111,9 +473,19 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiVeiculos.Controllers.VeiculoAssistenciaController",
+    "Method": "GetTodos",
+    "RelativePath": "api/VeiculoAssistencia",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "WebApiVeiculos.Models.ServiceResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApiVeiculos.Models.VeiculoAssistenciaModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -124,22 +496,22 @@
     ]
   },
   {
-    "ContainingType": "WebApiVeiculos.Controllers.VeiculoController",
-    "Method": "GetByGrupoAsync",
-    "RelativePath": "api/Veiculo/grupo/{grupoId}",
-    "HttpMethod": "GET",
+    "ContainingType": "WebApiVeiculos.Controllers.VeiculoAssistenciaController",
+    "Method": "Criar",
+    "RelativePath": "api/VeiculoAssistencia",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "grupoId",
-        "Type": "System.Int32",
+        "Name": "model",
+        "Type": "WebApiVeiculos.Models.VeiculoAssistenciaModel",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "WebApiVeiculos.Models.ServiceResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "WebApiVeiculos.Models.VeiculoAssistenciaModel",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -148,5 +520,78 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "WebApiVeiculos.Controllers.VeiculoAssistenciaController",
+    "Method": "GetPorId",
+    "RelativePath": "api/VeiculoAssistencia/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApiVeiculos.Models.VeiculoAssistenciaModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiVeiculos.Controllers.VeiculoAssistenciaController",
+    "Method": "Atualizar",
+    "RelativePath": "api/VeiculoAssistencia/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "WebApiVeiculos.Models.VeiculoAssistenciaModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApiVeiculos.Models.VeiculoAssistenciaModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiVeiculos.Controllers.VeiculoAssistenciaController",
+    "Method": "Deletar",
+    "RelativePath": "api/VeiculoAssistencia/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
