@@ -1,13 +1,13 @@
-﻿using WebApiVeiculos.Models;
+﻿using WebApiVeiculos.DTOs.EmpresaAssistenciaDTO;
 
 namespace WebApiVeiculos.Services.EmpresaAssistencia
 {
     public interface IEmpresaAssistenciaService
     {
-        Task<IEnumerable<EmpresaAssistenciaModel>> BuscarTodosAsync();
-        Task<EmpresaAssistenciaModel?> BuscarPorIdAsync(int id);
-        Task<EmpresaAssistenciaModel> CriarAsync(EmpresaAssistenciaModel empresa);
-        Task<EmpresaAssistenciaModel?> AtualizarAsync(int id, EmpresaAssistenciaModel empresa);
+        Task<IEnumerable<EmpresaAssistenciaDTO>> BuscarTodosAsync();
+        Task<EmpresaAssistenciaDTO?> BuscarPorIdAsync(int id);
+        Task<EmpresaAssistenciaDTO> CriarAsync(EmpresaAssistenciaDTO empresa);
+        Task<EmpresaAssistenciaDTO?> AtualizarAsync(int id, EmpresaAssistenciaDTO empresa);
         Task<bool> DeletarAsync(int id);
     }
 }

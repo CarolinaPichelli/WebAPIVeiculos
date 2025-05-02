@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using WebApiVeiculos.DataContext;
+using WebApiVeiculos.DTOs.GrupoVeiculoDTO;
 using WebApiVeiculos.Models;
-using WebApiVeiculos.Services.GrupoVeiculo;
 
-namespace WebApiVeiculos.Services
+namespace WebApiVeiculos.Services.GrupoVeiculo
 {
     public class GrupoVeiculoService : IGrupoVeiculoService
     {
@@ -14,46 +14,70 @@ namespace WebApiVeiculos.Services
             _context = context;
         }
 
-        public async Task<IEnumerable<GrupoVeiculoModel>> BuscarTodosAsync()
+        public async Task<List<GrupoVeiculoDTO>> GetAllAsync()
         {
-            return await _context.GrupoVeiculos.Include(g => g.Veiculos).ToListAsync();
+            return await _context.GrupoVeiculo
+                .Select(g => new GrupoVeiculoDTO
+                {
+                    Id = g.Id,
+                    Nome = g.Nome,
+                    Descricao = g.Descricao
+                })
+                .ToListAsync();
         }
 
-        public async Task<GrupoVeiculoModel?> BuscarPorIdAsync(int id)
+        public async Task<GrupoVeiculoDTO?> GetByIdAsync(int id)
         {
-            return await _context.GrupoVeiculos
-                .Include(g => g.Veiculos)
-                .FirstOrDefaultAsync(g => g.Id == id);
+            var grupo = await _context.GrupoVeiculo.FindAsync(id);
+            if (grupo == null) return null;
+
+            return new GrupoVeiculoDTO
+            {
+                Id = grupo.Id,
+                Nome = grupo.Nome,
+                Descricao = grupo.Descricao
+            };
         }
 
-        public async Task<GrupoVeiculoModel> CriarAsync(GrupoVeiculoModel grupo)
+        public async Task<GrupoVeiculoDTO> CreateAsync(GrupoVeiculoDTO dto)
         {
-            _context.GrupoVeiculos.Add(grupo);
+            var model = new GrupoVeiculoModel
+            {
+                Nome = dto.Nome,
+                Descricao = dto.Descricao
+            };
+
+            _context.GrupoVeiculo.Add(model);
             await _context.SaveChangesAsync();
-            return grupo;
+
+            dto.Id = model.Id;
+            return dto;
         }
 
-        public async Task<GrupoVeiculoModel?> AtualizarAsync(int id, GrupoVeiculoModel grupo)
+        public async Task<GrupoVeiculoDTO?> UpdateAsync(int id, GrupoVeiculoDTO dto)
         {
-            var existente = await _context.GrupoVeiculos.FindAsync(id);
-            if (existente == null)
-                return null;
+            var grupo = await _context.GrupoVeiculo.FindAsync(id);
+            if (grupo == null) return null;
 
-            existente.Nome = grupo.Nome;
-            existente.Descricao = grupo.Descricao;
+            grupo.Nome = dto.Nome;
+            grupo.Descricao = dto.Descricao;
 
-            _context.GrupoVeiculos.Update(existente);
             await _context.SaveChangesAsync();
-            return existente;
+
+            return new GrupoVeiculoDTO
+            {
+                Id = grupo.Id,
+                Nome = grupo.Nome,
+                Descricao = grupo.Descricao
+            };
         }
 
         public async Task<bool> DeletarAsync(int id)
         {
-            var grupo = await _context.GrupoVeiculos.FindAsync(id);
-            if (grupo == null)
-                return false;
+            var grupo = await _context.GrupoVeiculo.FindAsync(id);
+            if (grupo == null) return false;
 
-            _context.GrupoVeiculos.Remove(grupo);
+            _context.GrupoVeiculo.Remove(grupo);
             await _context.SaveChangesAsync();
             return true;
         }

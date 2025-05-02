@@ -1,13 +1,13 @@
-﻿using WebApiVeiculos.Models;
+﻿using WebApiVeiculos.DTOs.GrupoVeiculoDTO;
 
 namespace WebApiVeiculos.Services.GrupoVeiculo
 {
     public interface IGrupoVeiculoService
     {
-        Task<IEnumerable<GrupoVeiculoModel>> BuscarTodosAsync();
-        Task<GrupoVeiculoModel?> BuscarPorIdAsync(int id);
-        Task<GrupoVeiculoModel> CriarAsync(GrupoVeiculoModel grupo);
-        Task<GrupoVeiculoModel?> AtualizarAsync(int id, GrupoVeiculoModel grupo);
+        Task<List<GrupoVeiculoDTO>> GetAllAsync();
+        Task<GrupoVeiculoDTO?> GetByIdAsync(int id);
+        Task<GrupoVeiculoDTO> CreateAsync(GrupoVeiculoDTO dto);
+        Task<GrupoVeiculoDTO?> UpdateAsync(int id, GrupoVeiculoDTO dto);
         Task<bool> DeletarAsync(int id);
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Serilog;
-using WebApiVeiculos.Models;
+using WebApiVeiculos.DTOs.EmpresaAssistenciaDTO;
 using WebApiVeiculos.Services.EmpresaAssistencia;
 using ILogger = Serilog.ILogger;
 
@@ -20,7 +20,7 @@ namespace WebApiVeiculos.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<EmpresaAssistenciaModel>>> GetTodos()
+        public async Task<ActionResult<IEnumerable<EmpresaAssistenciaDTO>>> GetTodos()
         {
             try
             {
@@ -35,7 +35,7 @@ namespace WebApiVeiculos.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<EmpresaAssistenciaModel>> GetPorId(int id)
+        public async Task<ActionResult<EmpresaAssistenciaDTO>> GetPorId(int id)
         {
             try
             {
@@ -53,7 +53,7 @@ namespace WebApiVeiculos.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<EmpresaAssistenciaModel>> Criar(EmpresaAssistenciaModel empresa)
+        public async Task<ActionResult<EmpresaAssistenciaDTO>> Criar(EmpresaAssistenciaDTO empresa)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -71,7 +71,7 @@ namespace WebApiVeiculos.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<EmpresaAssistenciaModel>> Atualizar(int id, EmpresaAssistenciaModel empresa)
+        public async Task<ActionResult<EmpresaAssistenciaDTO>> Atualizar(int id, EmpresaAssistenciaDTO empresa)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);

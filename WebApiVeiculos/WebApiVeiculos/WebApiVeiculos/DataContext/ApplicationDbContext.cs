@@ -8,7 +8,7 @@ namespace WebApiVeiculos.DataContext
         public DbSet<VeiculoModel> Veiculos { get; set; }
         public DbSet<VeiculoAssistenciaModel> VeiculoAssistencias { get; set; }
         public DbSet<PlanoAssistenciaModel> PlanoAssistencias { get; set; }
-        public DbSet<GrupoVeiculoModel> GrupoVeiculos { get; set; }
+        public DbSet<GrupoVeiculoModel> GrupoVeiculo { get; set; }
         public DbSet<EmpresaAssistenciaModel> EmpresaAssistencias { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }

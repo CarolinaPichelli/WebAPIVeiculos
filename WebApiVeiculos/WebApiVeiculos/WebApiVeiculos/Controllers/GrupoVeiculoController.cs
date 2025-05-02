@@ -1,113 +1,81 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebApiVeiculos.DTOs.GrupoVeiculoDTO;
+using WebApiVeiculos.Services.GrupoVeiculo;
 using Serilog;
-using WebApiVeiculos.Models;
-using WebApiVeiculos.Services.GrupoVeiculo;
-using WebApiVeiculos.Services.GrupoVeiculo;
-using ILogger = Serilog.ILogger;
 
 namespace WebApiVeiculos.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class GrupoVeiculoController : ControllerBase
     {
         private readonly IGrupoVeiculoService _grupoService;
-        private readonly ILogger _logger;
 
         public GrupoVeiculoController(IGrupoVeiculoService grupoService)
         {
             _grupoService = grupoService;
-            _logger = Log.ForContext<GrupoVeiculoController>();
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<GrupoVeiculoModel>>> GetTodos()
+        public async Task<IActionResult> Get()
         {
-            try
-            {
-                var grupos = await _grupoService.BuscarTodosAsync();
-                return Ok(grupos);
-            }
-            catch (Exception ex)
-            {
-                _logger.Error(ex, "Erro ao buscar todos os grupos de veículos");
-                return StatusCode(500, "Erro interno");
-            }
+            var grupos = await _grupoService.GetAllAsync();
+            return Ok(grupos);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<GrupoVeiculoModel>> GetPorId(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            try
+            var grupo = await _grupoService.GetByIdAsync(id);
+            if (grupo == null)
             {
-                var grupo = await _grupoService.BuscarPorIdAsync(id);
-                if (grupo == null)
-                    return NotFound($"Grupo com ID {id} não encontrado");
+                Log.Warning("GrupoVeiculo com ID {Id} não encontrado.", id);
+                return NotFound();
+            }
 
-                return Ok(grupo);
-            }
-            catch (Exception ex)
-            {
-                _logger.Error(ex, "Erro ao buscar grupo com ID: {Id}", id);
-                return StatusCode(500, "Erro interno");
-            }
+            return Ok(grupo);
         }
 
         [HttpPost]
-        public async Task<ActionResult<GrupoVeiculoModel>> Criar(GrupoVeiculoModel grupo)
+        public async Task<IActionResult> Create([FromBody] GrupoVeiculoDTO dto)
         {
             if (!ModelState.IsValid)
+            {
+                Log.Warning("Dados inválidos enviados para criação de GrupoVeiculo.");
                 return BadRequest(ModelState);
+            }
 
-            try
-            {
-                var novo = await _grupoService.CriarAsync(grupo);
-                return CreatedAtAction(nameof(GetPorId), new { id = novo.Id }, novo);
-            }
-            catch (Exception ex)
-            {
-                _logger.Error(ex, "Erro ao criar grupo de veículo");
-                return StatusCode(500, "Erro interno");
-            }
+            var criado = await _grupoService.CreateAsync(dto);
+            Log.Information("GrupoVeiculo criado com sucesso: {@Grupo}", criado);
+            return CreatedAtAction(nameof(GetById), new { id = criado.Id }, criado);
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<GrupoVeiculoModel>> Atualizar(int id, GrupoVeiculoModel grupo)
+        public async Task<IActionResult> Update(int id, [FromBody] GrupoVeiculoDTO dto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            try
+            var atualizado = await _grupoService.UpdateAsync(id, dto);
+            if (atualizado == null)
             {
-                var atualizado = await _grupoService.AtualizarAsync(id, grupo);
-                if (atualizado == null)
-                    return NotFound($"Grupo com ID {id} não encontrado");
+                Log.Warning("Tentativa de atualizar GrupoVeiculo inexistente com ID {Id}.", id);
+                return NotFound();
+            }
 
-                return Ok(atualizado);
-            }
-            catch (Exception ex)
-            {
-                _logger.Error(ex, "Erro ao atualizar grupo com ID: {Id}", id);
-                return StatusCode(500, "Erro interno");
-            }
+            Log.Information("GrupoVeiculo atualizado com sucesso: {@Grupo}", atualizado);
+            return Ok(atualizado);
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Deletar(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            try
+            var deletado = await _grupoService.DeletarAsync(id);
+            if (!deletado)
             {
-                var sucesso = await _grupoService.DeletarAsync(id);
-                if (!sucesso)
-                    return NotFound($"Grupo com ID {id} não encontrado");
+                Log.Warning("Tentativa de deletar GrupoVeiculo inexistente com ID {Id}.", id);
+                return NotFound();
+            }
 
-                return NoContent();
-            }
-            catch (Exception ex)
-            {
-                _logger.Error(ex, "Erro ao deletar grupo com ID: {Id}", id);
-                return StatusCode(500, "Erro interno");
-            }
+            Log.Information("GrupoVeiculo com ID {Id} deletado com sucesso.", id);
+            return NoContent();
         }
     }
 }

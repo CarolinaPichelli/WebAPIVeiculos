@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApiVeiculos.Models.EmpresaAssistenciaModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -29,13 +29,13 @@
     "Parameters": [
       {
         "Name": "empresa",
-        "Type": "WebApiVeiculos.Models.EmpresaAssistenciaModel",
+        "Type": "WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "WebApiVeiculos.Models.EmpresaAssistenciaModel",
+        "Type": "WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -61,7 +61,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "WebApiVeiculos.Models.EmpresaAssistenciaModel",
+        "Type": "WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -86,13 +86,13 @@
       },
       {
         "Name": "empresa",
-        "Type": "WebApiVeiculos.Models.EmpresaAssistenciaModel",
+        "Type": "WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "WebApiVeiculos.Models.EmpresaAssistenciaModel",
+        "Type": "WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -120,53 +120,33 @@
   },
   {
     "ContainingType": "WebApiVeiculos.Controllers.GrupoVeiculoController",
-    "Method": "GetTodos",
+    "Method": "Get",
     "RelativePath": "api/GrupoVeiculo",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApiVeiculos.Models.GrupoVeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "WebApiVeiculos.Controllers.GrupoVeiculoController",
-    "Method": "Criar",
+    "Method": "Create",
     "RelativePath": "api/GrupoVeiculo",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "grupo",
-        "Type": "WebApiVeiculos.Models.GrupoVeiculoModel",
+        "Name": "dto",
+        "Type": "WebApiVeiculos.DTOs.GrupoVeiculoDTO.GrupoVeiculoDTO",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "WebApiVeiculos.Models.GrupoVeiculoModel",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "WebApiVeiculos.Controllers.GrupoVeiculoController",
-    "Method": "GetPorId",
+    "Method": "GetById",
     "RelativePath": "api/GrupoVeiculo/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -178,21 +158,11 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "WebApiVeiculos.Models.GrupoVeiculoModel",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "WebApiVeiculos.Controllers.GrupoVeiculoController",
-    "Method": "Atualizar",
+    "Method": "Update",
     "RelativePath": "api/GrupoVeiculo/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -204,26 +174,16 @@
         "IsRequired": true
       },
       {
-        "Name": "grupo",
-        "Type": "WebApiVeiculos.Models.GrupoVeiculoModel",
+        "Name": "dto",
+        "Type": "WebApiVeiculos.DTOs.GrupoVeiculoDTO.GrupoVeiculoDTO",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "WebApiVeiculos.Models.GrupoVeiculoModel",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "WebApiVeiculos.Controllers.GrupoVeiculoController",
-    "Method": "Deletar",
+    "Method": "Delete",
     "RelativePath": "api/GrupoVeiculo/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
