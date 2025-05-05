@@ -1,0 +1,70 @@
+<div class="container">
+
+<button> Cadastrar: Veículo </button>
+<button> Cadastrar: Grupo </button>
+<button> Cadastrar: Empresa </button>
+<button> Cadastrar: Plano </button>
+<button> Cadastrar: Assistência </button>
+
+<div class="input-box">
+    <label for="">Pesquisar: </label>
+    <input type="text" placeholder="O que deseja buscar?"/>
+</div>
+</div>
+
+<table class="table-home">
+    <thead>
+        <tr>
+            <th>Veículos</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let veiculo of veiculos">
+            <td>{{veiculo.placa}}</td>
+
+        </tr>
+    </tbody>
+</table>
+
+<table class="table-home">
+    <thead>
+        <tr>
+            <th>Grupos</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let grupo of grupos">
+            <td>{{grupo.nome}}</td>
+
+        </tr>
+    </tbody>
+</table>
+
+
+<table class="table-home">
+    <thead>
+        <tr>
+            <th>Empresas</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let empresa of empresas">
+            <td>{{empresa.nome}}</td>
+
+        </tr>
+    </tbody>
+</table>
+
+<table class="table-home">
+    <thead>
+        <tr>
+            <th>Planos</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let plano of planos">
+            <td>{{plano.descricao}}</td>
+
+        </tr>
+    </tbody>
+</table>

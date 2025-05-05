@@ -18,6 +18,14 @@ Log.Logger = new LoggerConfiguration()
     .Enrich.FromLogContext()
     .CreateLogger();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        policy => policy.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+});
+
 try
 {
     Log.Information("Iniciando a aplicação...");
@@ -51,7 +59,7 @@ try
         app.UseSwagger();
         app.UseSwaggerUI();
     }
-
+    app.UseCors("AllowAll"); // Adicionado no final do program
     app.UseHttpsRedirection();
     app.UseAuthorization();
     app.MapControllers();

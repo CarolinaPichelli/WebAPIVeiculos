@@ -1,0 +1,785 @@
+2025-05-05 08:46:31.450 -03:00 [INF] Iniciando a aplicação...
+2025-05-05 08:46:33.174 -03:00 [INF] Now listening on: http://localhost:5194
+2025-05-05 08:46:33.540 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-05 08:46:33.582 -03:00 [INF] Hosting environment: Development
+2025-05-05 08:46:33.588 -03:00 [INF] Content root path: C:\Users\Timeware73\Desktop\WebAPIVeiculos\WebApiVeiculos\WebApiVeiculos
+2025-05-05 08:46:35.275 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/swagger/index.html - null null
+2025-05-05 08:46:35.990 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/swagger/index.html - 200 null text/html;charset=utf-8 726.1022ms
+2025-05-05 08:46:36.020 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-05 08:46:36.028 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/_vs/browserLink - null null
+2025-05-05 08:46:36.040 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 21.2677ms
+2025-05-05 08:46:36.208 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/_vs/browserLink - 200 null text/javascript; charset=UTF-8 179.9744ms
+2025-05-05 08:46:36.379 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/swagger/v1/swagger.json - null null
+2025-05-05 08:46:36.451 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 72.383ms
+2025-05-05 08:46:46.030 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/VeiculoAssistencia - null null
+2025-05-05 08:46:46.055 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-05-05 08:46:46.070 -03:00 [INF] Executing endpoint 'WebApiVeiculos.API.Controllers.VeiculoAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 08:46:46.143 -03:00 [INF] Route matched with {action = "GetTodos", controller = "VeiculoAssistencia"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.API.Controllers.VeiculoAssistenciaController (WebApiVeiculos).
+2025-05-05 08:46:50.473 -03:00 [ERR] Failed executing DbCommand (173ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`VeiculoId`, `v`.`PlanoId`
+FROM `VeiculoAssistencias` AS `v`
+2025-05-05 08:46:50.656 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'WebApiVeiculos.DataContext.ApplicationDbContext'.
+MySqlConnector.MySqlException (0x80004005): Table 'veiculosdatabase.VeiculoAssistencias' doesn't exist
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+MySqlConnector.MySqlException (0x80004005): Table 'veiculosdatabase.VeiculoAssistencias' doesn't exist
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-05-05 08:46:51.078 -03:00 [ERR] Erro ao buscar todos os veículos de assistência
+MySqlConnector.MySqlException (0x80004005): Table 'veiculosdatabase.VeiculoAssistencias' doesn't exist
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at WebApiVeiculos.Services.VeiculoAssistenciaService.VeiculoAssistenciaService.BuscarTodosAsync() in C:\Users\Timeware73\Desktop\WebAPIVeiculos\WebApiVeiculos\WebApiVeiculos\Services\VeiculoAssistenciaService\VeiculoAssistenciaService.cs:line 21
+   at WebApiVeiculos.API.Controllers.VeiculoAssistenciaController.GetTodos() in C:\Users\Timeware73\Desktop\WebAPIVeiculos\WebApiVeiculos\WebApiVeiculos\Controllers\VeiculoAssistenciaController.cs:line 33
+2025-05-05 08:46:51.157 -03:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-05-05 08:46:51.179 -03:00 [INF] Executed action WebApiVeiculos.API.Controllers.VeiculoAssistenciaController.GetTodos (WebApiVeiculos) in 5019.2322ms
+2025-05-05 08:46:51.190 -03:00 [INF] Executed endpoint 'WebApiVeiculos.API.Controllers.VeiculoAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 08:46:51.219 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/VeiculoAssistencia - 500 null text/plain; charset=utf-8 5190.7125ms
+2025-05-05 08:54:24.797 -03:00 [INF] Iniciando a aplicação...
+2025-05-05 08:54:25.584 -03:00 [INF] Now listening on: http://localhost:5194
+2025-05-05 08:54:25.715 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-05 08:54:25.749 -03:00 [INF] Hosting environment: Development
+2025-05-05 08:54:25.750 -03:00 [INF] Content root path: C:\Users\Timeware73\Desktop\WebAPIVeiculos\WebApiVeiculos\WebApiVeiculos
+2025-05-05 08:54:26.706 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/swagger/index.html - null null
+2025-05-05 08:54:27.121 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/swagger/index.html - 200 null text/html;charset=utf-8 399.2165ms
+2025-05-05 08:54:27.129 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-05 08:54:27.131 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/_vs/browserLink - null null
+2025-05-05 08:54:27.176 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 46.8412ms
+2025-05-05 08:54:27.588 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/_vs/browserLink - 200 null text/javascript; charset=UTF-8 457.0435ms
+2025-05-05 08:54:27.779 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/swagger/v1/swagger.json - null null
+2025-05-05 08:54:27.826 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.0441ms
+2025-05-05 08:54:28.232 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-05 08:54:28.238 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 5.7073ms
+2025-05-05 08:54:28.731 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/swagger/v1/swagger.json - null null
+2025-05-05 08:54:28.764 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 32.7207ms
+2025-05-05 08:54:38.558 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/VeiculoAssistencia - null null
+2025-05-05 08:54:38.574 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-05-05 08:54:38.586 -03:00 [INF] Executing endpoint 'WebApiVeiculos.API.Controllers.VeiculoAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 08:54:38.646 -03:00 [INF] Route matched with {action = "GetTodos", controller = "VeiculoAssistencia"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.API.Controllers.VeiculoAssistenciaController (WebApiVeiculos).
+2025-05-05 08:54:41.936 -03:00 [INF] Executed DbCommand (116ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`VeiculoId`, `v`.`PlanoId`
+FROM `VeiculoAssistencias` AS `v`
+2025-05-05 08:54:42.061 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApiVeiculos.DTOs.VeiculoAssistenciaDTO.VeiculoAssistenciaDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 08:54:42.159 -03:00 [INF] Executed action WebApiVeiculos.API.Controllers.VeiculoAssistenciaController.GetTodos (WebApiVeiculos) in 3493.6654ms
+2025-05-05 08:54:42.167 -03:00 [INF] Executed endpoint 'WebApiVeiculos.API.Controllers.VeiculoAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 08:54:42.195 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/VeiculoAssistencia - 200 null application/json; charset=utf-8 3637.4308ms
+2025-05-05 08:55:06.453 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5194/api/VeiculoAssistencia - application/json 47
+2025-05-05 08:55:06.469 -03:00 [INF] Executing endpoint 'WebApiVeiculos.API.Controllers.VeiculoAssistenciaController.CriarAsync (WebApiVeiculos)'
+2025-05-05 08:55:06.497 -03:00 [INF] Route matched with {action = "Criar", controller = "VeiculoAssistencia"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CriarAsync(WebApiVeiculos.DTOs.VeiculoAssistenciaDTO.VeiculoAssistenciaDTO) on controller WebApiVeiculos.API.Controllers.VeiculoAssistenciaController (WebApiVeiculos).
+2025-05-05 08:55:06.980 -03:00 [INF] Executed DbCommand (91ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+WHERE `v`.`Id` = @__p_0
+LIMIT 1
+2025-05-05 08:55:07.268 -03:00 [INF] Executed DbCommand (53ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Cobertura`, `p`.`Descricao`, `p`.`EmpresaId`
+FROM `PlanoAssistencias` AS `p`
+WHERE `p`.`Id` = @__p_0
+LIMIT 1
+2025-05-05 08:55:07.386 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__dto_VeiculoId_0='?' (DbType = Int32), @__dto_PlanoId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `VeiculoAssistencias` AS `v`
+    WHERE (`v`.`VeiculoId` = @__dto_VeiculoId_0) AND (`v`.`PlanoId` = @__dto_PlanoId_1))
+2025-05-05 08:55:07.800 -03:00 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `VeiculoAssistencias` (`PlanoId`, `VeiculoId`)
+VALUES (@p0, @p1);
+SELECT `Id`
+FROM `VeiculoAssistencias`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2025-05-05 08:55:07.887 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'WebApiVeiculos.DTOs.VeiculoAssistenciaDTO.VeiculoAssistenciaDTO'.
+2025-05-05 08:55:07.956 -03:00 [INF] Executed action WebApiVeiculos.API.Controllers.VeiculoAssistenciaController.CriarAsync (WebApiVeiculos) in 1453.7358ms
+2025-05-05 08:55:07.961 -03:00 [INF] Executed endpoint 'WebApiVeiculos.API.Controllers.VeiculoAssistenciaController.CriarAsync (WebApiVeiculos)'
+2025-05-05 08:55:07.968 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5194/api/VeiculoAssistencia - 201 null application/json; charset=utf-8 1514.5471ms
+2025-05-05 08:55:17.374 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/VeiculoAssistencia/1 - null null
+2025-05-05 08:55:17.406 -03:00 [INF] Executing endpoint 'WebApiVeiculos.API.Controllers.VeiculoAssistenciaController.GetPorId (WebApiVeiculos)'
+2025-05-05 08:55:17.418 -03:00 [INF] Route matched with {action = "GetPorId", controller = "VeiculoAssistencia"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPorId(Int32) on controller WebApiVeiculos.API.Controllers.VeiculoAssistenciaController (WebApiVeiculos).
+2025-05-05 08:55:17.717 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`PlanoId`, `v`.`VeiculoId`, `p`.`Id`, `p`.`Cobertura`, `p`.`Descricao`, `p`.`EmpresaId`
+FROM `VeiculoAssistencias` AS `v`
+INNER JOIN `PlanoAssistencias` AS `p` ON `v`.`PlanoId` = `p`.`Id`
+WHERE `v`.`Id` = @__id_0
+LIMIT 1
+2025-05-05 08:55:17.730 -03:00 [INF] Executing OkObjectResult, writing value of type 'WebApiVeiculos.DTOs.VeiculoAssistenciaDTO.VeiculoAssistenciaDTO'.
+2025-05-05 08:55:17.732 -03:00 [INF] Executed action WebApiVeiculos.API.Controllers.VeiculoAssistenciaController.GetPorId (WebApiVeiculos) in 308.5693ms
+2025-05-05 08:55:17.734 -03:00 [INF] Executed endpoint 'WebApiVeiculos.API.Controllers.VeiculoAssistenciaController.GetPorId (WebApiVeiculos)'
+2025-05-05 08:55:17.738 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/VeiculoAssistencia/1 - 200 null application/json; charset=utf-8 368.557ms
+2025-05-05 09:46:44.334 -03:00 [INF] Iniciando a aplicação...
+2025-05-05 09:46:45.428 -03:00 [INF] Now listening on: http://localhost:5194
+2025-05-05 09:46:45.521 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-05 09:46:45.549 -03:00 [INF] Hosting environment: Development
+2025-05-05 09:46:45.553 -03:00 [INF] Content root path: C:\Users\Timeware73\Desktop\WebAPIVeiculos\WebApiVeiculos\WebApiVeiculos
+2025-05-05 09:46:47.436 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/swagger/index.html - null null
+2025-05-05 09:46:47.915 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/swagger/index.html - 200 null text/html;charset=utf-8 492.0871ms
+2025-05-05 09:46:47.948 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-05 09:46:47.948 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/_vs/browserLink - null null
+2025-05-05 09:46:47.963 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 14.9851ms
+2025-05-05 09:46:48.125 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/_vs/browserLink - 200 null text/javascript; charset=UTF-8 178.7883ms
+2025-05-05 09:46:48.198 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/swagger/v1/swagger.json - null null
+2025-05-05 09:46:48.257 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 58.8135ms
+2025-05-05 09:46:49.465 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-05 09:46:49.470 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 5.1542ms
+2025-05-05 09:46:49.790 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/swagger/v1/swagger.json - null null
+2025-05-05 09:46:49.815 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.5807ms
+2025-05-05 09:47:01.629 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/EmpresaAssistencia - null null
+2025-05-05 09:47:01.656 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-05-05 09:47:01.670 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 09:47:01.711 -03:00 [INF] Route matched with {action = "GetTodos", controller = "EmpresaAssistencia"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO]]] GetTodos() on controller WebApiVeiculos.Controllers.EmpresaAssistenciaController (WebApiVeiculos).
+2025-05-05 09:47:03.570 -03:00 [INF] Executed DbCommand (115ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `e`.`Id`, `e`.`Endereco`, `e`.`Nome`
+FROM `EmpresaAssistencias` AS `e`
+2025-05-05 09:47:03.688 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.EmpresaAssistenciaModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 09:47:03.701 -03:00 [INF] Executed action WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos) in 1983.7219ms
+2025-05-05 09:47:03.703 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 09:47:03.718 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/EmpresaAssistencia - 200 null application/json; charset=utf-8 2089.0738ms
+2025-05-05 10:19:37.992 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/Veiculo - null null
+2025-05-05 10:19:38.021 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 10:19:38.050 -03:00 [INF] Route matched with {action = "GetTodos", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 10:19:38.310 -03:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+2025-05-05 10:19:38.331 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 10:19:38.341 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos) in 289.2547ms
+2025-05-05 10:19:38.343 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 10:19:38.345 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/Veiculo - 200 null application/json; charset=utf-8 356.4794ms
+2025-05-05 10:46:12.341 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/Veiculo - null null
+2025-05-05 10:46:12.477 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 10:46:12.499 -03:00 [INF] Route matched with {action = "GetTodos", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 10:46:13.129 -03:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+2025-05-05 10:46:13.145 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 10:46:13.155 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos) in 649.6097ms
+2025-05-05 10:46:13.157 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 10:46:13.163 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/Veiculo - null null
+2025-05-05 10:46:13.173 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/Veiculo - 200 null application/json; charset=utf-8 855.8716ms
+2025-05-05 10:46:13.175 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 10:46:13.184 -03:00 [INF] Route matched with {action = "GetTodos", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 10:46:13.267 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+2025-05-05 10:46:13.273 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 10:46:13.278 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos) in 89.3158ms
+2025-05-05 10:46:13.283 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 10:46:13.286 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/Veiculo - 200 null application/json; charset=utf-8 123.7961ms
+2025-05-05 10:46:36.218 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/Veiculo - null null
+2025-05-05 10:46:36.304 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 10:46:36.307 -03:00 [INF] Route matched with {action = "GetTodos", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 10:46:36.339 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+2025-05-05 10:46:36.356 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 10:46:36.367 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos) in 52.8436ms
+2025-05-05 10:46:36.371 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 10:46:36.377 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/Veiculo - 200 null application/json; charset=utf-8 158.7384ms
+2025-05-05 10:46:36.454 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/favicon.ico - null null
+2025-05-05 10:46:36.469 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/favicon.ico - 404 0 null 15.0917ms
+2025-05-05 10:46:36.504 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5194/favicon.ico, Response status code: 404
+2025-05-05 10:49:00.904 -03:00 [INF] Iniciando a aplicação...
+2025-05-05 10:49:01.977 -03:00 [INF] Now listening on: http://localhost:5194
+2025-05-05 10:49:02.961 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-05 10:49:03.063 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/swagger/index.html - null null
+2025-05-05 10:49:03.097 -03:00 [INF] Hosting environment: Development
+2025-05-05 10:49:03.234 -03:00 [INF] Content root path: C:\Users\Timeware73\Desktop\WebAPIVeiculos\WebApiVeiculos\WebApiVeiculos
+2025-05-05 10:49:03.852 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/swagger/index.html - 200 null text/html;charset=utf-8 801.3566ms
+2025-05-05 10:49:03.917 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/_vs/browserLink - null null
+2025-05-05 10:49:04.000 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-05 10:49:04.133 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 132.8976ms
+2025-05-05 10:49:04.214 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/_vs/browserLink - 200 null text/javascript; charset=UTF-8 295.5887ms
+2025-05-05 10:49:04.412 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/swagger/v1/swagger.json - null null
+2025-05-05 10:49:04.455 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.3493ms
+2025-05-05 10:49:05.993 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-05 10:49:06.000 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 6.69ms
+2025-05-05 10:49:06.863 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/swagger/v1/swagger.json - null null
+2025-05-05 10:49:06.884 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 21.2378ms
+2025-05-05 10:49:29.779 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/Veiculo - null null
+2025-05-05 10:49:29.994 -03:00 [INF] CORS policy execution successful.
+2025-05-05 10:49:30.086 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-05-05 10:49:30.110 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 10:49:30.187 -03:00 [INF] Route matched with {action = "GetTodos", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 10:49:33.163 -03:00 [INF] Executed DbCommand (60ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+2025-05-05 10:49:33.426 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 10:49:33.468 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/Veiculo - null null
+2025-05-05 10:49:33.475 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos) in 3269.7821ms
+2025-05-05 10:49:33.485 -03:00 [INF] CORS policy execution successful.
+2025-05-05 10:49:33.487 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 10:49:33.489 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 10:49:33.499 -03:00 [INF] Route matched with {action = "GetTodos", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 10:49:33.517 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/Veiculo - 200 null application/json; charset=utf-8 3738.2309ms
+2025-05-05 10:49:33.576 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+2025-05-05 10:49:33.585 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 10:49:33.590 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos) in 81.6704ms
+2025-05-05 10:49:33.593 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 10:49:33.596 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/Veiculo - 200 null application/json; charset=utf-8 128.5753ms
+2025-05-05 10:49:58.740 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/Veiculo - null null
+2025-05-05 10:49:58.816 -03:00 [INF] CORS policy execution successful.
+2025-05-05 10:49:58.828 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 10:49:58.830 -03:00 [INF] Route matched with {action = "GetTodos", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 10:49:58.976 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+2025-05-05 10:49:58.981 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 10:49:58.988 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos) in 149.4142ms
+2025-05-05 10:49:58.990 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/Veiculo - null null
+2025-05-05 10:49:58.992 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 10:49:58.997 -03:00 [INF] CORS policy execution successful.
+2025-05-05 10:49:59.002 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/Veiculo - 200 null application/json; charset=utf-8 261.5761ms
+2025-05-05 10:49:59.003 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 10:49:59.008 -03:00 [INF] Route matched with {action = "GetTodos", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 10:49:59.057 -03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+2025-05-05 10:49:59.063 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 10:49:59.076 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos) in 64.6168ms
+2025-05-05 10:49:59.079 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 10:49:59.081 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/Veiculo - 200 null application/json; charset=utf-8 90.385ms
+2025-05-05 12:02:02.567 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/Veiculo - null 0
+2025-05-05 12:02:02.567 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/Veiculo - null 0
+2025-05-05 12:02:02.662 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:02:02.662 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:02:02.682 -03:00 [INF] Route matched with {action = "GetTodos", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 12:02:02.682 -03:00 [INF] Route matched with {action = "GetTodos", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 12:02:03.263 -03:00 [INF] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+2025-05-05 12:02:03.263 -03:00 [INF] Executed DbCommand (64ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+2025-05-05 12:02:03.287 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:02:03.287 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:02:03.305 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos) in 611.1417ms
+2025-05-05 12:02:03.315 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:02:03.307 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos) in 616.2248ms
+2025-05-05 12:02:03.318 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/Veiculo - 200 null application/json; charset=utf-8 774.5942ms
+2025-05-05 12:02:03.319 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:02:03.328 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/Veiculo - 200 null application/json; charset=utf-8 785.0569ms
+2025-05-05 12:19:00.961 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - null null
+2025-05-05 12:19:00.985 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:19:01.078 -03:00 [INF] Route matched with {action = "Get", controller = "GrupoVeiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller WebApiVeiculos.Controllers.GrupoVeiculoController (WebApiVeiculos).
+2025-05-05 12:19:01.765 -03:00 [INF] Executed DbCommand (143ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `g`.`Id`, `g`.`Nome`, `g`.`Descricao`
+FROM `GrupoVeiculo` AS `g`
+2025-05-05 12:19:01.777 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApiVeiculos.DTOs.GrupoVeiculoDTO.GrupoVeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:19:01.800 -03:00 [INF] Executed action WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos) in 711.8367ms
+2025-05-05 12:19:01.804 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:19:01.812 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - 200 null application/json; charset=utf-8 850.9542ms
+2025-05-05 12:24:55.892 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - null 0
+2025-05-05 12:24:55.892 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/Veiculo - null 0
+2025-05-05 12:24:55.932 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:24:55.935 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:24:55.937 -03:00 [INF] Route matched with {action = "GetTodos", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 12:24:55.937 -03:00 [INF] Route matched with {action = "Get", controller = "GrupoVeiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller WebApiVeiculos.Controllers.GrupoVeiculoController (WebApiVeiculos).
+2025-05-05 12:24:56.161 -03:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+2025-05-05 12:24:56.161 -03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `g`.`Id`, `g`.`Nome`, `g`.`Descricao`
+FROM `GrupoVeiculo` AS `g`
+2025-05-05 12:24:56.167 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApiVeiculos.DTOs.GrupoVeiculoDTO.GrupoVeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:24:56.170 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:24:56.170 -03:00 [INF] Executed action WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos) in 224.7405ms
+2025-05-05 12:24:56.174 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos) in 230.4574ms
+2025-05-05 12:24:56.175 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:24:56.177 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:24:56.178 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - 200 null application/json; charset=utf-8 293.2179ms
+2025-05-05 12:24:56.179 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/Veiculo - 200 null application/json; charset=utf-8 293.8161ms
+2025-05-05 12:25:43.946 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/Veiculo - null 0
+2025-05-05 12:25:43.948 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - null 0
+2025-05-05 12:25:43.949 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/Veiculo - null 0
+2025-05-05 12:25:43.960 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - null 0
+2025-05-05 12:25:43.963 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:25:43.964 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:25:43.967 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:25:43.969 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:25:43.972 -03:00 [INF] Route matched with {action = "GetTodos", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 12:25:43.973 -03:00 [INF] Route matched with {action = "Get", controller = "GrupoVeiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller WebApiVeiculos.Controllers.GrupoVeiculoController (WebApiVeiculos).
+2025-05-05 12:25:43.974 -03:00 [INF] Route matched with {action = "GetTodos", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 12:25:43.975 -03:00 [INF] Route matched with {action = "Get", controller = "GrupoVeiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller WebApiVeiculos.Controllers.GrupoVeiculoController (WebApiVeiculos).
+2025-05-05 12:25:44.005 -03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+2025-05-05 12:25:44.005 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+2025-05-05 12:25:44.014 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:25:44.026 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:25:44.029 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos) in 47.9222ms
+2025-05-05 12:25:44.032 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos) in 55.0439ms
+2025-05-05 12:25:44.041 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:25:44.045 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:25:44.061 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/Veiculo - 200 null application/json; charset=utf-8 112.6066ms
+2025-05-05 12:25:44.064 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/Veiculo - 200 null application/json; charset=utf-8 118.2271ms
+2025-05-05 12:25:44.064 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `g`.`Id`, `g`.`Nome`, `g`.`Descricao`
+FROM `GrupoVeiculo` AS `g`
+2025-05-05 12:25:44.075 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `g`.`Id`, `g`.`Nome`, `g`.`Descricao`
+FROM `GrupoVeiculo` AS `g`
+2025-05-05 12:25:44.080 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApiVeiculos.DTOs.GrupoVeiculoDTO.GrupoVeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:25:44.082 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApiVeiculos.DTOs.GrupoVeiculoDTO.GrupoVeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:25:44.083 -03:00 [INF] Executed action WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos) in 104.5868ms
+2025-05-05 12:25:44.085 -03:00 [INF] Executed action WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos) in 90.8088ms
+2025-05-05 12:25:44.089 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:25:44.091 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:25:44.093 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - 200 null application/json; charset=utf-8 144.4256ms
+2025-05-05 12:25:44.097 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - 200 null application/json; charset=utf-8 136.2316ms
+2025-05-05 12:27:24.599 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5194/api/GrupoVeiculo - application/json 71
+2025-05-05 12:27:24.605 -03:00 [INF] CORS policy execution successful.
+2025-05-05 12:27:24.607 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Create (WebApiVeiculos)'
+2025-05-05 12:27:24.645 -03:00 [INF] Route matched with {action = "Create", controller = "GrupoVeiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(WebApiVeiculos.DTOs.GrupoVeiculoDTO.GrupoVeiculoDTO) on controller WebApiVeiculos.Controllers.GrupoVeiculoController (WebApiVeiculos).
+2025-05-05 12:27:25.070 -03:00 [INF] Executed DbCommand (64ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `GrupoVeiculo` (`Descricao`, `Nome`)
+VALUES (@p0, @p1);
+SELECT `Id`
+FROM `GrupoVeiculo`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2025-05-05 12:27:25.131 -03:00 [INF] GrupoVeiculo criado com sucesso: {"Id":2,"Nome":"Picape","Descricao":"carros com caçamba","$type":"GrupoVeiculoDTO"}
+2025-05-05 12:27:25.147 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'WebApiVeiculos.DTOs.GrupoVeiculoDTO.GrupoVeiculoDTO'.
+2025-05-05 12:27:25.195 -03:00 [INF] Executed action WebApiVeiculos.Controllers.GrupoVeiculoController.Create (WebApiVeiculos) in 546.0932ms
+2025-05-05 12:27:25.197 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Create (WebApiVeiculos)'
+2025-05-05 12:27:25.200 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5194/api/GrupoVeiculo - 201 null application/json; charset=utf-8 600.7865ms
+2025-05-05 12:27:30.708 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/Veiculo - null 0
+2025-05-05 12:27:30.708 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - null 0
+2025-05-05 12:27:30.711 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:27:30.715 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:27:30.719 -03:00 [INF] Route matched with {action = "GetTodos", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 12:27:30.720 -03:00 [INF] Route matched with {action = "Get", controller = "GrupoVeiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller WebApiVeiculos.Controllers.GrupoVeiculoController (WebApiVeiculos).
+2025-05-05 12:27:30.729 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+2025-05-05 12:27:30.738 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `g`.`Id`, `g`.`Nome`, `g`.`Descricao`
+FROM `GrupoVeiculo` AS `g`
+2025-05-05 12:27:30.741 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:27:30.741 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApiVeiculos.DTOs.GrupoVeiculoDTO.GrupoVeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:27:30.743 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos) in 21.4143ms
+2025-05-05 12:27:30.744 -03:00 [INF] Executed action WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos) in 20.9182ms
+2025-05-05 12:27:30.745 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:27:30.747 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:27:30.752 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/Veiculo - 200 null application/json; charset=utf-8 44.2797ms
+2025-05-05 12:27:30.754 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - 200 null application/json; charset=utf-8 45.6193ms
+2025-05-05 12:27:50.467 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - null null
+2025-05-05 12:27:50.472 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:27:50.473 -03:00 [INF] Route matched with {action = "Get", controller = "GrupoVeiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller WebApiVeiculos.Controllers.GrupoVeiculoController (WebApiVeiculos).
+2025-05-05 12:27:50.487 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `g`.`Id`, `g`.`Nome`, `g`.`Descricao`
+FROM `GrupoVeiculo` AS `g`
+2025-05-05 12:27:50.489 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApiVeiculos.DTOs.GrupoVeiculoDTO.GrupoVeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:27:50.491 -03:00 [INF] Executed action WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos) in 15.8489ms
+2025-05-05 12:27:50.493 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:27:50.494 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - 200 null application/json; charset=utf-8 27.3567ms
+2025-05-05 12:28:08.749 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5194/api/GrupoVeiculo/2 - application/json 77
+2025-05-05 12:28:08.754 -03:00 [INF] CORS policy execution successful.
+2025-05-05 12:28:08.755 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Update (WebApiVeiculos)'
+2025-05-05 12:28:08.769 -03:00 [INF] Route matched with {action = "Update", controller = "GrupoVeiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(Int32, WebApiVeiculos.DTOs.GrupoVeiculoDTO.GrupoVeiculoDTO) on controller WebApiVeiculos.Controllers.GrupoVeiculoController (WebApiVeiculos).
+2025-05-05 12:28:08.865 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `g`.`Id`, `g`.`Descricao`, `g`.`Nome`
+FROM `GrupoVeiculo` AS `g`
+WHERE `g`.`Id` = @__p_0
+LIMIT 1
+2025-05-05 12:28:08.900 -03:00 [INF] Executed DbCommand (24ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+UPDATE `GrupoVeiculo` SET `Nome` = @p0
+WHERE `Id` = @p1;
+SELECT ROW_COUNT();
+2025-05-05 12:28:08.904 -03:00 [INF] GrupoVeiculo atualizado com sucesso: {"Id":2,"Nome":"Grupo Picape","Descricao":"carros com caçamba","$type":"GrupoVeiculoDTO"}
+2025-05-05 12:28:08.909 -03:00 [INF] Executing OkObjectResult, writing value of type 'WebApiVeiculos.DTOs.GrupoVeiculoDTO.GrupoVeiculoDTO'.
+2025-05-05 12:28:08.911 -03:00 [INF] Executed action WebApiVeiculos.Controllers.GrupoVeiculoController.Update (WebApiVeiculos) in 137.0451ms
+2025-05-05 12:28:08.915 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Update (WebApiVeiculos)'
+2025-05-05 12:28:08.917 -03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5194/api/GrupoVeiculo/2 - 200 null application/json; charset=utf-8 167.8655ms
+2025-05-05 12:28:33.277 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5194/api/Veiculo - application/json 71
+2025-05-05 12:28:33.290 -03:00 [INF] CORS policy execution successful.
+2025-05-05 12:28:33.291 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.Criar (WebApiVeiculos)'
+2025-05-05 12:28:33.298 -03:00 [INF] Route matched with {action = "Criar", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Criar(WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO) on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 12:28:33.384 -03:00 [ERR] Failed executing DbCommand (49ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 10)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Veiculos` (`GrupoId`, `Modelo`, `Placa`)
+VALUES (@p0, @p1, @p2);
+SELECT `Id`
+FROM `Veiculos`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2025-05-05 12:28:33.524 -03:00 [ERR] An exception occurred in the database while saving changes for context type 'WebApiVeiculos.DataContext.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`veiculosdatabase`.`Veiculos`, CONSTRAINT `FK_Veiculos_GrupoVeiculo_grupoId` FOREIGN KEY (`grupoId`) REFERENCES `GrupoVeiculo` (`id`) ON DELETE CASCADE)
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`veiculosdatabase`.`Veiculos`, CONSTRAINT `FK_Veiculos_GrupoVeiculo_grupoId` FOREIGN KEY (`grupoId`) REFERENCES `GrupoVeiculo` (`id`) ON DELETE CASCADE)
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-05-05 12:28:33.681 -03:00 [ERR] Erro ao criar veículo
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`veiculosdatabase`.`Veiculos`, CONSTRAINT `FK_Veiculos_GrupoVeiculo_grupoId` FOREIGN KEY (`grupoId`) REFERENCES `GrupoVeiculo` (`id`) ON DELETE CASCADE)
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at WebApiVeiculos.Services.VeiculoService.CriarAsync(VeiculoDTO veiculoDto) in C:\Users\Timeware73\Desktop\WebAPIVeiculos\WebApiVeiculos\WebApiVeiculos\Services\VeiculoService\VeiculoService.cs:line 73
+2025-05-05 12:28:33.814 -03:00 [ERR] Erro ao criar veículo
+System.Exception: Erro interno ao criar veículo
+   at WebApiVeiculos.Services.VeiculoService.CriarAsync(VeiculoDTO veiculoDto) in C:\Users\Timeware73\Desktop\WebAPIVeiculos\WebApiVeiculos\WebApiVeiculos\Services\VeiculoService\VeiculoService.cs:line 81
+   at WebApiVeiculos.Controllers.VeiculoController.Criar(VeiculoDTO veiculo) in C:\Users\Timeware73\Desktop\WebAPIVeiculos\WebApiVeiculos\WebApiVeiculos\Controllers\VeiculoController.cs:line 66
+2025-05-05 12:28:33.818 -03:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-05-05 12:28:33.820 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.Criar (WebApiVeiculos) in 515.3211ms
+2025-05-05 12:28:33.822 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.Criar (WebApiVeiculos)'
+2025-05-05 12:28:33.823 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5194/api/Veiculo - 500 null text/plain; charset=utf-8 551.1551ms
+2025-05-05 12:28:40.479 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5194/api/Veiculo - application/json 71
+2025-05-05 12:28:40.483 -03:00 [INF] CORS policy execution successful.
+2025-05-05 12:28:40.484 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.Criar (WebApiVeiculos)'
+2025-05-05 12:28:40.486 -03:00 [INF] Route matched with {action = "Criar", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Criar(WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO) on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 12:28:40.507 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 10)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Veiculos` (`GrupoId`, `Modelo`, `Placa`)
+VALUES (@p0, @p1, @p2);
+SELECT `Id`
+FROM `Veiculos`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2025-05-05 12:28:40.520 -03:00 [INF] Veículo criado: {"Id":3,"Modelo":"Celta","Placa":"2HFPQ4","GrupoId":1,"GrupoVeiculo":null,"VeiculoAssistencias":[],"$type":"VeiculoModel"}
+2025-05-05 12:28:40.529 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO'.
+2025-05-05 12:28:40.532 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.Criar (WebApiVeiculos) in 43.4091ms
+2025-05-05 12:28:40.534 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.Criar (WebApiVeiculos)'
+2025-05-05 12:28:40.535 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5194/api/Veiculo - 201 null application/json; charset=utf-8 55.9ms
+2025-05-05 12:28:44.123 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/Veiculo - null 0
+2025-05-05 12:28:44.124 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - null 0
+2025-05-05 12:28:44.131 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:28:44.136 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:28:44.137 -03:00 [INF] Route matched with {action = "GetTodos", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 12:28:44.138 -03:00 [INF] Route matched with {action = "Get", controller = "GrupoVeiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller WebApiVeiculos.Controllers.GrupoVeiculoController (WebApiVeiculos).
+2025-05-05 12:28:44.152 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+2025-05-05 12:28:44.154 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `g`.`Id`, `g`.`Nome`, `g`.`Descricao`
+FROM `GrupoVeiculo` AS `g`
+2025-05-05 12:28:44.156 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:28:44.167 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos) in 27.6345ms
+2025-05-05 12:28:44.158 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApiVeiculos.DTOs.GrupoVeiculoDTO.GrupoVeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:28:44.170 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:28:44.171 -03:00 [INF] Executed action WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos) in 29.4312ms
+2025-05-05 12:28:44.172 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/Veiculo - 200 null application/json; charset=utf-8 48.8697ms
+2025-05-05 12:28:44.173 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:28:44.186 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - 200 null application/json; charset=utf-8 62.0808ms
+2025-05-05 12:34:39.386 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/EmpresaAssistencia - null null
+2025-05-05 12:34:39.420 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:34:39.486 -03:00 [INF] Route matched with {action = "GetTodos", controller = "EmpresaAssistencia"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO]]] GetTodos() on controller WebApiVeiculos.Controllers.EmpresaAssistenciaController (WebApiVeiculos).
+2025-05-05 12:34:39.870 -03:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `e`.`Id`, `e`.`Endereco`, `e`.`Nome`
+FROM `EmpresaAssistencias` AS `e`
+2025-05-05 12:34:39.901 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.EmpresaAssistenciaModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:34:39.917 -03:00 [INF] Executed action WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos) in 428.4574ms
+2025-05-05 12:34:39.919 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:34:39.921 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/EmpresaAssistencia - 200 null application/json; charset=utf-8 548.5709ms
+2025-05-05 12:37:06.059 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/Veiculo - null 0
+2025-05-05 12:37:06.062 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - null 0
+2025-05-05 12:37:06.068 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/EmpresaAssistencia - null 0
+2025-05-05 12:37:06.077 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:37:06.078 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:37:06.081 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:37:06.082 -03:00 [INF] Route matched with {action = "GetTodos", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 12:37:06.083 -03:00 [INF] Route matched with {action = "Get", controller = "GrupoVeiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller WebApiVeiculos.Controllers.GrupoVeiculoController (WebApiVeiculos).
+2025-05-05 12:37:06.084 -03:00 [INF] Route matched with {action = "GetTodos", controller = "EmpresaAssistencia"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO]]] GetTodos() on controller WebApiVeiculos.Controllers.EmpresaAssistenciaController (WebApiVeiculos).
+2025-05-05 12:37:06.112 -03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+2025-05-05 12:37:06.117 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:37:06.124 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos) in 38.8975ms
+2025-05-05 12:37:06.148 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:37:06.158 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/Veiculo - 200 null application/json; charset=utf-8 100.3569ms
+2025-05-05 12:37:06.181 -03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `g`.`Id`, `g`.`Nome`, `g`.`Descricao`
+FROM `GrupoVeiculo` AS `g`
+2025-05-05 12:37:06.182 -03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `e`.`Id`, `e`.`Endereco`, `e`.`Nome`
+FROM `EmpresaAssistencias` AS `e`
+2025-05-05 12:37:06.187 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApiVeiculos.DTOs.GrupoVeiculoDTO.GrupoVeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:37:06.192 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.EmpresaAssistenciaModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:37:06.194 -03:00 [INF] Executed action WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos) in 101.344ms
+2025-05-05 12:37:06.196 -03:00 [INF] Executed action WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos) in 99.9022ms
+2025-05-05 12:37:06.197 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:37:06.199 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:37:06.200 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - 200 null application/json; charset=utf-8 138.9277ms
+2025-05-05 12:37:06.205 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/EmpresaAssistencia - 200 null application/json; charset=utf-8 136.5625ms
+2025-05-05 12:37:11.642 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/Veiculo - null 0
+2025-05-05 12:37:11.642 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - null 0
+2025-05-05 12:37:11.646 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/EmpresaAssistencia - null 0
+2025-05-05 12:37:11.647 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:37:11.649 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:37:11.652 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:37:11.659 -03:00 [INF] Route matched with {action = "GetTodos", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 12:37:11.659 -03:00 [INF] Route matched with {action = "Get", controller = "GrupoVeiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller WebApiVeiculos.Controllers.GrupoVeiculoController (WebApiVeiculos).
+2025-05-05 12:37:11.660 -03:00 [INF] Route matched with {action = "GetTodos", controller = "EmpresaAssistencia"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO]]] GetTodos() on controller WebApiVeiculos.Controllers.EmpresaAssistenciaController (WebApiVeiculos).
+2025-05-05 12:37:11.679 -03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+2025-05-05 12:37:11.679 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `g`.`Id`, `g`.`Nome`, `g`.`Descricao`
+FROM `GrupoVeiculo` AS `g`
+2025-05-05 12:37:11.690 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:37:11.693 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApiVeiculos.DTOs.GrupoVeiculoDTO.GrupoVeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:37:11.690 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `e`.`Id`, `e`.`Endereco`, `e`.`Nome`
+FROM `EmpresaAssistencias` AS `e`
+2025-05-05 12:37:11.699 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos) in 38.1062ms
+2025-05-05 12:37:11.700 -03:00 [INF] Executed action WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos) in 37.4655ms
+2025-05-05 12:37:11.702 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.EmpresaAssistenciaModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:37:11.708 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:37:11.710 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:37:11.711 -03:00 [INF] Executed action WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos) in 43.4012ms
+2025-05-05 12:37:11.712 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/Veiculo - 200 null application/json; charset=utf-8 70.4607ms
+2025-05-05 12:37:11.713 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - 200 null application/json; charset=utf-8 71.1618ms
+2025-05-05 12:37:11.714 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:37:11.726 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/EmpresaAssistencia - 200 null application/json; charset=utf-8 80.4633ms
+2025-05-05 12:39:14.185 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/Veiculo - null 0
+2025-05-05 12:39:14.187 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - null 0
+2025-05-05 12:39:14.203 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/EmpresaAssistencia - null 0
+2025-05-05 12:39:14.219 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:39:14.220 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:39:14.222 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:39:14.224 -03:00 [INF] Route matched with {action = "GetTodos", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 12:39:14.227 -03:00 [INF] Route matched with {action = "Get", controller = "GrupoVeiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller WebApiVeiculos.Controllers.GrupoVeiculoController (WebApiVeiculos).
+2025-05-05 12:39:14.229 -03:00 [INF] Route matched with {action = "GetTodos", controller = "EmpresaAssistencia"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO]]] GetTodos() on controller WebApiVeiculos.Controllers.EmpresaAssistenciaController (WebApiVeiculos).
+2025-05-05 12:39:14.243 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+2025-05-05 12:39:14.249 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `g`.`Id`, `g`.`Nome`, `g`.`Descricao`
+FROM `GrupoVeiculo` AS `g`
+2025-05-05 12:39:14.255 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `e`.`Id`, `e`.`Endereco`, `e`.`Nome`
+FROM `EmpresaAssistencias` AS `e`
+2025-05-05 12:39:14.256 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:39:14.258 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApiVeiculos.DTOs.GrupoVeiculoDTO.GrupoVeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:39:14.260 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.EmpresaAssistenciaModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:39:14.261 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos) in 27.603ms
+2025-05-05 12:39:14.262 -03:00 [INF] Executed action WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos) in 26.4152ms
+2025-05-05 12:39:14.267 -03:00 [INF] Executed action WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos) in 26.7049ms
+2025-05-05 12:39:14.268 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:39:14.269 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:39:14.271 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:39:14.272 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/Veiculo - 200 null application/json; charset=utf-8 87.1751ms
+2025-05-05 12:39:14.273 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - 200 null application/json; charset=utf-8 85.851ms
+2025-05-05 12:39:14.275 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/EmpresaAssistencia - 200 null application/json; charset=utf-8 79.5235ms
+2025-05-05 12:39:21.199 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/Veiculo - null 0
+2025-05-05 12:39:21.200 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - null 0
+2025-05-05 12:39:21.201 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/EmpresaAssistencia - null 0
+2025-05-05 12:39:21.209 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:39:21.212 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:39:21.224 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:39:21.225 -03:00 [INF] Route matched with {action = "GetTodos", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 12:39:21.226 -03:00 [INF] Route matched with {action = "Get", controller = "GrupoVeiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller WebApiVeiculos.Controllers.GrupoVeiculoController (WebApiVeiculos).
+2025-05-05 12:39:21.227 -03:00 [INF] Route matched with {action = "GetTodos", controller = "EmpresaAssistencia"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO]]] GetTodos() on controller WebApiVeiculos.Controllers.EmpresaAssistenciaController (WebApiVeiculos).
+2025-05-05 12:39:21.243 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+2025-05-05 12:39:21.295 -03:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `g`.`Id`, `g`.`Nome`, `g`.`Descricao`
+FROM `GrupoVeiculo` AS `g`
+2025-05-05 12:39:21.299 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `e`.`Id`, `e`.`Endereco`, `e`.`Nome`
+FROM `EmpresaAssistencias` AS `e`
+2025-05-05 12:39:21.301 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:39:21.302 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApiVeiculos.DTOs.GrupoVeiculoDTO.GrupoVeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:39:21.307 -03:00 [INF] Executed action WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos) in 67.3697ms
+2025-05-05 12:39:21.306 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos) in 76.8581ms
+2025-05-05 12:39:21.304 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.EmpresaAssistenciaModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:39:21.310 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:39:21.312 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:39:21.317 -03:00 [INF] Executed action WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos) in 64.2051ms
+2025-05-05 12:39:21.318 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - 200 null application/json; charset=utf-8 117.7982ms
+2025-05-05 12:39:21.319 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/Veiculo - 200 null application/json; charset=utf-8 119.5031ms
+2025-05-05 12:39:21.321 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:39:21.337 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/EmpresaAssistencia - 200 null application/json; charset=utf-8 136.1814ms
+2025-05-05 12:39:36.167 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/Veiculo - null 0
+2025-05-05 12:39:36.168 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - null 0
+2025-05-05 12:39:36.169 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/EmpresaAssistencia - null 0
+2025-05-05 12:39:36.177 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:39:36.184 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:39:36.186 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:39:36.187 -03:00 [INF] Route matched with {action = "GetTodos", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 12:39:36.188 -03:00 [INF] Route matched with {action = "Get", controller = "GrupoVeiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller WebApiVeiculos.Controllers.GrupoVeiculoController (WebApiVeiculos).
+2025-05-05 12:39:36.189 -03:00 [INF] Route matched with {action = "GetTodos", controller = "EmpresaAssistencia"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO]]] GetTodos() on controller WebApiVeiculos.Controllers.EmpresaAssistenciaController (WebApiVeiculos).
+2025-05-05 12:39:36.205 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+2025-05-05 12:39:36.211 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `e`.`Id`, `e`.`Endereco`, `e`.`Nome`
+FROM `EmpresaAssistencias` AS `e`
+2025-05-05 12:39:36.226 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:39:36.209 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `g`.`Id`, `g`.`Nome`, `g`.`Descricao`
+FROM `GrupoVeiculo` AS `g`
+2025-05-05 12:39:36.234 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.EmpresaAssistenciaModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:39:36.236 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos) in 44.5954ms
+2025-05-05 12:39:36.238 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApiVeiculos.DTOs.GrupoVeiculoDTO.GrupoVeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 12:39:36.239 -03:00 [INF] Executed action WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos) in 37.2334ms
+2025-05-05 12:39:36.242 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:39:36.245 -03:00 [INF] Executed action WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos) in 52.1265ms
+2025-05-05 12:39:36.252 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 12:39:36.253 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/Veiculo - 200 null application/json; charset=utf-8 86.282ms
+2025-05-05 12:39:36.255 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 12:39:36.257 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/EmpresaAssistencia - 200 null application/json; charset=utf-8 88.1259ms
+2025-05-05 12:39:36.261 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - 200 null application/json; charset=utf-8 92.9556ms
+2025-05-05 13:06:43.077 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - null 0
+2025-05-05 13:06:43.077 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/Veiculo - null 0
+2025-05-05 13:06:43.077 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - null 0
+2025-05-05 13:06:43.077 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/EmpresaAssistencia - null 0
+2025-05-05 13:06:43.117 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 13:06:43.123 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 13:06:43.131 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 13:06:43.136 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 13:06:43.146 -03:00 [INF] Route matched with {action = "Get", controller = "GrupoVeiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller WebApiVeiculos.Controllers.GrupoVeiculoController (WebApiVeiculos).
+2025-05-05 13:06:43.146 -03:00 [INF] Route matched with {action = "GetTodos", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 13:06:43.146 -03:00 [INF] Route matched with {action = "Get", controller = "GrupoVeiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller WebApiVeiculos.Controllers.GrupoVeiculoController (WebApiVeiculos).
+2025-05-05 13:06:43.146 -03:00 [INF] Route matched with {action = "GetTodos", controller = "EmpresaAssistencia"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO]]] GetTodos() on controller WebApiVeiculos.Controllers.EmpresaAssistenciaController (WebApiVeiculos).
+2025-05-05 13:06:43.797 -03:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `e`.`Id`, `e`.`Endereco`, `e`.`Nome`
+FROM `EmpresaAssistencias` AS `e`
+2025-05-05 13:06:43.797 -03:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+2025-05-05 13:06:43.797 -03:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `g`.`Id`, `g`.`Nome`, `g`.`Descricao`
+FROM `GrupoVeiculo` AS `g`
+2025-05-05 13:06:43.806 -03:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `g`.`Id`, `g`.`Nome`, `g`.`Descricao`
+FROM `GrupoVeiculo` AS `g`
+2025-05-05 13:06:43.822 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApiVeiculos.DTOs.GrupoVeiculoDTO.GrupoVeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 13:06:43.822 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApiVeiculos.DTOs.GrupoVeiculoDTO.GrupoVeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 13:06:43.824 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 13:06:43.824 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.EmpresaAssistenciaModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 13:06:43.830 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos) in 675.2473ms
+2025-05-05 13:06:43.830 -03:00 [INF] Executed action WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos) in 680.071ms
+2025-05-05 13:06:43.830 -03:00 [INF] Executed action WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos) in 671.1729ms
+2025-05-05 13:06:43.830 -03:00 [INF] Executed action WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos) in 669.1421ms
+2025-05-05 13:06:43.832 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 13:06:43.833 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 13:06:43.836 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 13:06:43.839 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 13:06:43.842 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/Veiculo - 200 null application/json; charset=utf-8 783.5248ms
+2025-05-05 13:06:43.842 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - 200 null application/json; charset=utf-8 776.884ms
+2025-05-05 13:06:43.844 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - 200 null application/json; charset=utf-8 785.7239ms
+2025-05-05 13:06:43.845 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/EmpresaAssistencia - 200 null application/json; charset=utf-8 778.0771ms
+2025-05-05 13:08:32.916 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/Veiculo - null 0
+2025-05-05 13:08:32.929 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/PlanoAssistencia - null 0
+2025-05-05 13:08:32.940 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - null 0
+2025-05-05 13:08:32.956 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/api/EmpresaAssistencia - null 0
+2025-05-05 13:08:32.968 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 13:08:32.977 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.PlanoAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 13:08:32.990 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 13:08:33.005 -03:00 [INF] Executing endpoint 'WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 13:08:33.011 -03:00 [INF] Route matched with {action = "GetTodos", controller = "Veiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.VeiculoController (WebApiVeiculos).
+2025-05-05 13:08:33.020 -03:00 [INF] Route matched with {action = "Get", controller = "GrupoVeiculo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller WebApiVeiculos.Controllers.GrupoVeiculoController (WebApiVeiculos).
+2025-05-05 13:08:33.024 -03:00 [INF] Route matched with {action = "GetTodos", controller = "EmpresaAssistencia"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO]]] GetTodos() on controller WebApiVeiculos.Controllers.EmpresaAssistenciaController (WebApiVeiculos).
+2025-05-05 13:08:33.084 -03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`GrupoId`, `v`.`Modelo`, `v`.`Placa`
+FROM `Veiculos` AS `v`
+2025-05-05 13:08:33.088 -03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `g`.`Id`, `g`.`Nome`, `g`.`Descricao`
+FROM `GrupoVeiculo` AS `g`
+2025-05-05 13:08:33.174 -03:00 [INF] Route matched with {action = "GetTodos", controller = "PlanoAssistencia"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos() on controller WebApiVeiculos.Controllers.PlanoAssistenciaController (WebApiVeiculos).
+2025-05-05 13:08:33.170 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.VeiculoModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.VeiculoDTO.VeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 13:08:33.089 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `e`.`Id`, `e`.`Endereco`, `e`.`Nome`
+FROM `EmpresaAssistencias` AS `e`
+2025-05-05 13:08:33.189 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApiVeiculos.DTOs.GrupoVeiculoDTO.GrupoVeiculoDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 13:08:33.200 -03:00 [INF] Executed action WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos) in 163.6292ms
+2025-05-05 13:08:33.208 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[WebApiVeiculos.Models.EmpresaAssistenciaModel, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebApiVeiculos.DTOs.EmpresaAssistenciaDTO.EmpresaAssistenciaDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 13:08:33.210 -03:00 [INF] Executed action WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos) in 168.6486ms
+2025-05-05 13:08:33.216 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.VeiculoController.GetTodos (WebApiVeiculos)'
+2025-05-05 13:08:33.220 -03:00 [INF] Executed action WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos) in 165.7137ms
+2025-05-05 13:08:33.224 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.GrupoVeiculoController.Get (WebApiVeiculos)'
+2025-05-05 13:08:33.233 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/Veiculo - 200 null application/json; charset=utf-8 318.6745ms
+2025-05-05 13:08:33.237 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.EmpresaAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 13:08:33.240 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/GrupoVeiculo - 200 null application/json; charset=utf-8 300.7201ms
+2025-05-05 13:08:33.258 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/EmpresaAssistencia - 200 null application/json; charset=utf-8 301.8584ms
+2025-05-05 13:08:33.309 -03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Descricao`, `p`.`Cobertura`, `p`.`EmpresaId`
+FROM `PlanoAssistencias` AS `p`
+2025-05-05 13:08:33.316 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApiVeiculos.DTOs.PlanoAssistenciaDTO.PlanoAssistenciaDTO, WebApiVeiculos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-05 13:08:33.334 -03:00 [INF] Executed action WebApiVeiculos.Controllers.PlanoAssistenciaController.GetTodos (WebApiVeiculos) in 141.3964ms
+2025-05-05 13:08:33.337 -03:00 [INF] Executed endpoint 'WebApiVeiculos.Controllers.PlanoAssistenciaController.GetTodos (WebApiVeiculos)'
+2025-05-05 13:08:33.340 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/api/PlanoAssistencia - 200 null application/json; charset=utf-8 412.1072ms
