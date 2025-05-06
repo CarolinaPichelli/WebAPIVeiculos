@@ -1,0 +1,46 @@
+.container {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .input-box {
+    max-width: 400px;
+  }
+  
+  .search-box {
+    width: 100%;
+  }
+  
+  .table-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+  }
+  
+  table {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+  }
+  
+  th {
+    background-color: #3f51b5;
+    color: #c52768;
+    font-weight: bold;
+    padding: 12px;
+  }
+  
+  td {
+    padding: 12px;
+    border-top: 1px solid #eee;
+  }
+  

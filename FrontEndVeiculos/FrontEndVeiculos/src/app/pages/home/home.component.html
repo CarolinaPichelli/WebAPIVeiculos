@@ -1,70 +1,69 @@
 <div class="container">
-
-<button> Cadastrar: Veículo </button>
-<button> Cadastrar: Grupo </button>
-<button> Cadastrar: Empresa </button>
-<button> Cadastrar: Plano </button>
-<button> Cadastrar: Assistência </button>
-
-<div class="input-box">
-    <label for="">Pesquisar: </label>
-    <input type="text" placeholder="O que deseja buscar?"/>
-</div>
-</div>
-
-<table class="table-home">
-    <thead>
-        <tr>
-            <th>Veículos</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let veiculo of veiculos">
-            <td>{{veiculo.placa}}</td>
-
-        </tr>
-    </tbody>
-</table>
-
-<table class="table-home">
-    <thead>
-        <tr>
-            <th>Grupos</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let grupo of grupos">
-            <td>{{grupo.nome}}</td>
-
-        </tr>
-    </tbody>
-</table>
-
-
-<table class="table-home">
-    <thead>
-        <tr>
-            <th>Empresas</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let empresa of empresas">
-            <td>{{empresa.nome}}</td>
-
-        </tr>
-    </tbody>
-</table>
-
-<table class="table-home">
-    <thead>
-        <tr>
-            <th>Planos</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let plano of planos">
-            <td>{{plano.descricao}}</td>
-
-        </tr>
-    </tbody>
-</table>
+    <div class="action-buttons">
+      <button mat-raised-button color="primary">Cadastrar: Veículo</button>
+      <button mat-raised-button color="accent">Cadastrar: Grupo</button>
+      <button mat-raised-button color="warn">Cadastrar: Empresa</button>
+      <button mat-raised-button color="primary">Cadastrar: Plano</button>
+      <button mat-raised-button color="accent">Cadastrar: Assistência</button>
+    </div>
+  
+    <div class="input-box">
+      <mat-form-field appearance="outline" class="search-box">
+        <mat-label>Pesquisar</mat-label>
+        <input matInput placeholder="O que deseja buscar?" />
+      </mat-form-field>
+    </div>
+  
+        <div class="table-grid">
+        <!-- Criação da tabela utilizando o componente de tabela do Angular Material -->
+        <table mat-table [dataSource]="veiculos" class="mat-elevation-z2">
+        <!-- 'dataSource' é a lista de dados que a tabela irá exibir (no caso, a lista de veículos) -->
+        <!-- 'mat-elevation-z2' é uma classe do Angular Material que adiciona uma leve sombra (efeito de elevação) -->
+    
+        <!-- Definição de uma coluna chamada 'placa' -->
+        <ng-container matColumnDef="placa">
+        <!-- Cabeçalho da coluna 'placa' -->
+            <th mat-header-cell *matHeaderCellDef>Veículos</th>
+            <!-- Célula da linha: o valor mostrado será veiculo.placa, para cada item da lista -->
+            <td mat-cell *matCellDef="let veiculo">{{ veiculo.placa }}</td>
+        </ng-container>
+    
+        <!-- Linha de cabeçalho da tabela, que usa a coluna 'placa' definida acima -->
+            <tr mat-header-row *matHeaderRowDef="['placa']"></tr>
+            <!-- Linha de dados da tabela, que também usa a coluna 'placa' -->
+            <!-- 'let row' representa cada objeto da lista 'veiculos' -->
+            <tr mat-row *matRowDef="let row; columns: ['placa'];"></tr>
+    </table>
+    
+        <table mat-table [dataSource]="grupos" class="mat-elevation-z2">
+        <ng-container matColumnDef="nome">
+          <th mat-header-cell *matHeaderCellDef>Grupos</th>
+          <td mat-cell *matCellDef="let grupo">{{ grupo.nome }}</td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="['nome']"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['nome'];"></tr>
+      </table>
+  
+      <table mat-table [dataSource]="empresas" class="mat-elevation-z2">
+        <ng-container matColumnDef="nome">
+          <th mat-header-cell *matHeaderCellDef>Empresas</th>
+          <td mat-cell *matCellDef="let empresa">{{ empresa.nome }}</td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="['nome']"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['nome'];"></tr>
+      </table>
+  
+      <table mat-table [dataSource]="planos" class="mat-elevation-z2">
+        <ng-container matColumnDef="descricao">
+          <th mat-header-cell *matHeaderCellDef>Planos</th>
+          <td mat-cell *matCellDef="let plano">{{ plano.descricao }}</td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="['descricao']"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['descricao'];"></tr>
+      </table>
+    </div>
+  </div>
+  

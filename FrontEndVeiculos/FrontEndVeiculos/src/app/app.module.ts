@@ -7,6 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 
+// Angular Material Modules
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,6 +24,15 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule, 
+
+      // Material Modules usados
+      MatButtonModule,
+      MatFormFieldModule,
+      MatInputModule,
+      MatTableModule,
+      MatIconModule,
+      MatCardModule,
+    
   ],
   providers: [
     provideClientHydration(withEventReplay())
