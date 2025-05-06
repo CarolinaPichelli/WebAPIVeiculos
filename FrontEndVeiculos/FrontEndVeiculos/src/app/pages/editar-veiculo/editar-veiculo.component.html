@@ -1,0 +1,9 @@
+<div *ngIf="veiculo">
+    <app-form-veiculos
+      [btnAcao]="btnAcao"
+      [btnTitulo]="btnTitulo"
+      [dadosVeiculo]="veiculo"
+      (onSubmit)="formularioVeiculo.setValue($event); submit()">
+    </app-form-veiculos>
+  </div>
+  

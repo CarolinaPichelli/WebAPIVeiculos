@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -14,25 +15,33 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { VeiculosHomeComponent } from './pages/veiculos-home/veiculos-home.component';
+import { CadastroVeiculoComponent } from './pages/cadastro-veiculo/cadastro-veiculo.component';
+import { FormVeiculosComponent } from "./components/form-veiculos/form-veiculos.component";
+import { EditarVeiculoComponent } from './pages/editar-veiculo/editar-veiculo.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    VeiculosHomeComponent,
+    CadastroVeiculoComponent,
+    EditarVeiculoComponent,
+     // ✅ Agora está no lugar certo
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    HttpClientModule, 
-
-      // Material Modules usados
-      MatButtonModule,
-      MatFormFieldModule,
-      MatInputModule,
-      MatTableModule,
-      MatIconModule,
-      MatCardModule,
-    
+    HttpClientModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTableModule,
+    MatIconModule,
+    MatCardModule,
+    FormVeiculosComponent
   ],
   providers: [
     provideClientHydration(withEventReplay())

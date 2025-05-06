@@ -11,11 +11,21 @@ export class VeiculoService {
 
   private url = `${environment.ApiUrl}Veiculo`
 
-  constructor(private http: HttpClient) {
-
-   }
+  constructor(private http: HttpClient) {}
 
    GetVeiculos() : Observable<Veiculo[]>{
     return this.http.get<Veiculo[]>(this.url);
+  }
+
+  CreateVeiculo(veiculo: Veiculo): Observable<Veiculo[]> {
+    return this.http.post<Veiculo[]>(`${this.url}`, veiculo);
+  }
+
+  GetVeiculoById(id: number) : Observable<Veiculo> {
+    return this.http.get<Veiculo>(`${this.url}/${id}`);
+  }
+
+  UpdateVeiculo (id: number | undefined, veiculo: Veiculo): Observable<Veiculo[]> {
+    return this.http.put<Veiculo[]>(`${this.url}`, veiculo);
   }
 }
