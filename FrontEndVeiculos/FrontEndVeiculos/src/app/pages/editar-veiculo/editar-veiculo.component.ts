@@ -3,7 +3,6 @@ import { VeiculoService } from '../../services/veiculo.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Veiculo } from '../../models/veiculos';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { FormVeiculosComponent } from '../../components/form-veiculos/form-veiculos.component';
 
 @Component({
   selector: 'app-editar-veiculo',
@@ -52,12 +51,12 @@ export class EditarVeiculoComponent {
     if (this.formularioVeiculo.valid) {
       if (!this.veiculo) {
         console.error("Veículo não carregado.");
-        return;  // Evita enviar o formulário antes de carregar os dados do veículo
+        return;  
       }
       
       // Usando o id do veículo corretamente
-      this.veiculoService.UpdateVeiculo(this.veiculo.id, this.formularioVeiculo.value).subscribe({
-        next: () => this.router.navigate(['/veiculo-home']),
+      this.veiculoService.UpdateVeiculo(this.veiculo.id!, this.formularioVeiculo.value).subscribe({
+        next: () => this.router.navigate(['/veiculos-home']),
         error: (err) => console.error('Erro ao atualizar veículo:', err)
       });
     }

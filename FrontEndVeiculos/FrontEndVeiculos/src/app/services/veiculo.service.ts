@@ -13,7 +13,7 @@ export class VeiculoService {
 
   constructor(private http: HttpClient) {}
 
-   GetVeiculos() : Observable<Veiculo[]>{
+  GetVeiculos() : Observable<Veiculo[]>{
     return this.http.get<Veiculo[]>(this.url);
   }
 
@@ -25,7 +25,12 @@ export class VeiculoService {
     return this.http.get<Veiculo>(`${this.url}/${id}`);
   }
 
-  UpdateVeiculo (id: number | undefined, veiculo: Veiculo): Observable<Veiculo[]> {
-    return this.http.put<Veiculo[]>(`${this.url}`, veiculo);
+  UpdateVeiculo(id: number, veiculo: Veiculo): Observable<Veiculo> {
+    return this.http.put<Veiculo>(`${this.url}/${id}`, veiculo);
+  }
+
+  DeleteVeiculo(id: number): Observable<Veiculo[]> {
+    // Usando path parameter para identificar o veículo
+    return this.http.delete<Veiculo[]>(`${this.url}/${id}`);
   }
 }

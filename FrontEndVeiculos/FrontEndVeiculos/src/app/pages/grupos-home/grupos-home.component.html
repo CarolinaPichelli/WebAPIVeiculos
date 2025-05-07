@@ -1,0 +1,52 @@
+<!-- Modal de confirmação de exclusão -->
+<app-excluir
+  *ngIf="grupoId"
+  [itemId]="grupoId"
+  (confirmDelete)="onConfirmDelete($event)">
+</app-excluir>
+
+<div class="container">
+  <div class="action-buttons">
+    <!-- Botão para cadastrar um novo grupo -->
+    <button mat-raised-button color="primary" [routerLink]="['/cadastro-grupo']">Cadastrar novo grupo</button>
+  </div>
+
+  <!-- Tabela de grupos -->
+  <div class="table-grid">
+    <table mat-table [dataSource]="grupos" class="mat-elevation-z2">
+
+      <!-- Coluna de Identificador -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>Identificador</th>
+        <td mat-cell *matCellDef="let grupo">{{ grupo.id }}</td>
+      </ng-container>
+
+      <!-- Coluna de Nome -->
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef>Nome</th>
+        <td mat-cell *matCellDef="let grupo">{{ grupo.nome }}</td>
+      </ng-container>
+
+      <!-- Coluna de Descrição -->
+      <ng-container matColumnDef="descricao">
+        <th mat-header-cell *matHeaderCellDef>Descrição</th>
+        <td mat-cell *matCellDef="let grupo">{{ grupo.descricao }}</td>
+      </ng-container>
+
+      <!-- Coluna de Ações -->
+      <ng-container matColumnDef="acoes">
+        <th mat-header-cell *matHeaderCellDef>Ações</th>
+        <td mat-cell *matCellDef="let grupo">
+          <!-- Botão de Editar -->
+          <button mat-raised-button color="accent" [routerLink]="['/editar-grupo', grupo.id]">Editar</button>
+          <!-- Botão de Excluir -->
+          <button mat-raised-button color="warn" (click)="openDeleteModal(grupo.id)">Excluir</button>
+        </td>
+      </ng-container>
+
+      <!-- Definindo o cabeçalho e linhas da tabela -->
+      <tr mat-header-row *matHeaderRowDef="['id', 'nome', 'descricao', 'acoes']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['id', 'nome', 'descricao', 'acoes'];"></tr>
+    </table>
+  </div>
+</div>

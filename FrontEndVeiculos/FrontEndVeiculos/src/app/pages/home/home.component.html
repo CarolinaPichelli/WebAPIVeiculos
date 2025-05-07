@@ -1,18 +1,18 @@
 <div class="container">
   <div class="action-buttons">
     <button mat-raised-button color="primary"[routerLink]="['veiculos-home']">Veículos</button>
-    <button mat-raised-button color="accent">Cadastrar: Grupo</button>
-    <button mat-raised-button color="warn">Cadastrar: Empresa</button>
-    <button mat-raised-button color="primary">Cadastrar: Plano</button>
+    <button mat-raised-button color="accent" [routerLink]="['grupos-home']">Grupos</button>
+    <button mat-raised-button color="warn" [routerLink]="['empresas-home']">Empresas</button>
+    <button mat-raised-button color="primary" [routerLink]="['planos-home']">Planos</button>
     <button mat-raised-button color="accent">Cadastrar: Assistência</button>
   </div>
 
-  <div class="input-box">
+  <!-- <div class="input-box">
     <mat-form-field appearance="outline" class="search-box">
       <mat-label>Pesquisar</mat-label>
       <input matInput placeholder="O que deseja buscar?" />
     </mat-form-field>
-  </div>
+  </div> -->
 
       <div class="table-grid">
       <!-- Criação da tabela utilizando o componente de tabela do Angular Material -->

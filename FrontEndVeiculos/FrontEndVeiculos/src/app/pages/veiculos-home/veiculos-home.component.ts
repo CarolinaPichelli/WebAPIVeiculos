@@ -13,6 +13,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class VeiculosHomeComponent {
   veiculos: Veiculo[] = []; 
   veiculosGeral: Veiculo[] = []; 
+  veiculoId!: number;
 
   constructor(private veiculoService: VeiculoService, public dialog: MatDialog) { 
     // Inicializa o array de usuários
@@ -24,29 +25,30 @@ export class VeiculosHomeComponent {
       this.veiculos = data;
       this.veiculosGeral = data;
 
-  })
-
-}
+  });
 }
 
+  // Método chamado quando a exclusão for confirmada
+  onConfirmDelete(veiculoId: number): void {
+    this.veiculoService.DeleteVeiculo(veiculoId).subscribe({
+      next: () => {
+        console.log('Veículo excluído com sucesso!');
+        // Remover o veículo da lista ou redirecionar, conforme necessário
+        this.veiculos = this.veiculos.filter(veiculo => veiculo.id !== veiculoId);
+      },
+      error: (err) => console.error('Erro ao excluir veículo:', err)
+    });
+  }
+
+  // Abre o modal de exclusão
+  openDeleteModal(veiculoId: number): void {
+    this.veiculoId = veiculoId;
+  }
+}
 
 
 
-// search(event: Event): void {
-//   const target = event.target as HTMLInputElement;
-//   const value = target.value.toLowerCase(); // converte valor para lowercase
 
-//   this.usuarios = this.usuarioGeral.filter(usuario => {  
-//     return usuario.nome.toLowerCase().includes(value) || usuario.email.toLowerCase().includes(value) ; // faz comparação em lowercase
-//   });
-// }
 
-// OpenDialog(id : number){
-//   this.dialog.open(ExcluirComponent, {
-//     width: '350px', 
-//     height: '350px',
-//     data: {id: id}, 
-//   });
-  
-// }
-// }
+
+

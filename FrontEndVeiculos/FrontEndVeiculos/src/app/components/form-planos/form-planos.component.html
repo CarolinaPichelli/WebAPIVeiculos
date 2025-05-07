@@ -1,0 +1,32 @@
+<div class="container">
+    <h1>{{ btnTitulo }}</h1>
+  
+    <form *ngIf="formularioPlano" [formGroup]="formularioPlano" (ngSubmit)="submit()">
+  
+      <!-- Campo: Descrição -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Descrição</mat-label>
+        <input matInput id="descricao" formControlName="descricao" placeholder="Digite a descrição" required>
+      </mat-form-field>
+  
+      <!-- Campo: Cobertura -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Cobertura</mat-label>
+        <input matInput id="cobertura" formControlName="cobertura" placeholder="Digite a cobertura" required>
+      </mat-form-field>
+  
+      <!-- Campo: Empresa ID -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Identificador da empresa</mat-label>
+        <input matInput id="empresaId" formControlName="empresaId" placeholder="Digite o identificador da empresa" required>
+      </mat-form-field>
+  
+      <!-- Botões -->
+      <div class="action-buttons">
+        <button mat-raised-button color="primary" type="submit">{{ btnAcao }}</button>
+        <!-- <button mat-raised-button color="accent" type="button" routerLink="">Voltar</button> -->
+      </div>
+      
+    </form>
+  </div>
+  

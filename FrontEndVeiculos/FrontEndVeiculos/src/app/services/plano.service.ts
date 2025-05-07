@@ -18,4 +18,20 @@ export class PlanoService {
    GetPlanos() : Observable<Plano[]>{
     return this.http.get<Plano[]>(this.url);
   }
+
+  CreatePlano(plano: Plano): Observable<Plano[]> {
+    return this.http.post<Plano[]>(`${this.url}`, plano);
+  }
+  
+    GetPlanoById(id: number) : Observable<Plano> {
+      return this.http.get<Plano>(`${this.url}/${id}`);
+    }
+  
+    UpdatePlano(id: number, plano: Plano): Observable<Plano> {
+      return this.http.put<Plano>(`${this.url}/${id}`, plano);
+    }
+  
+    DeletePlano(id: number): Observable<Plano[]> {
+      return this.http.delete<Plano[]>(`${this.url}/${id}`);
+    }
 }

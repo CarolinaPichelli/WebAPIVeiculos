@@ -1,0 +1,9 @@
+<div *ngIf="grupo">
+    <app-form-grupos
+      [btnAcao]="btnAcao"
+      [btnTitulo]="btnTitulo"
+      [dadosGrupo]="grupo"
+      (onSubmit)="formularioGrupo.setValue($event); submit()">
+    </app-form-grupos>
+  </div>
+  

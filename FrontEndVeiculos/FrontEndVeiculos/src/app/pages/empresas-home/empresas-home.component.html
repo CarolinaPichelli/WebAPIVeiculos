@@ -1,0 +1,52 @@
+<!-- Modal de confirmação de exclusão -->
+<app-excluir
+  *ngIf="empresaId"
+  [itemId]="empresaId"
+  (confirmDelete)="onConfirmDelete($event)">
+</app-excluir>
+
+<div class="container">
+  <div class="action-buttons">
+    <!-- Botão para cadastrar uma nova empresa -->
+    <button mat-raised-button color="primary" [routerLink]="['/cadastro-empresa']">Cadastrar nova empresa</button>
+  </div>
+
+  <!-- Tabela de empresas -->
+  <div class="table-grid">
+    <table mat-table [dataSource]="empresas" class="mat-elevation-z2">
+
+      <!-- Coluna de Identificador -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>Identificador</th>
+        <td mat-cell *matCellDef="let empresa">{{ empresa.id }}</td>
+      </ng-container>
+
+      <!-- Coluna de Nome -->
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef>Nome</th>
+        <td mat-cell *matCellDef="let empresa">{{ empresa.nome }}</td>
+      </ng-container>
+
+      <!-- Coluna de Endereço -->
+      <ng-container matColumnDef="endereco">
+        <th mat-header-cell *matHeaderCellDef>Endereço</th>
+        <td mat-cell *matCellDef="let empresa">{{ empresa.endereco }}</td>
+      </ng-container>
+
+      <!-- Coluna de Ações -->
+      <ng-container matColumnDef="acoes">
+        <th mat-header-cell *matHeaderCellDef>Ações</th>
+        <td mat-cell *matCellDef="let empresa">
+          <!-- Botão de Editar -->
+          <button mat-raised-button color="accent" [routerLink]="['/editar-empresa', empresa.id]">Editar</button>
+          <!-- Botão de Excluir -->
+          <button mat-raised-button color="warn" (click)="openDeleteModal(empresa.id)">Excluir</button>
+        </td>
+      </ng-container>
+
+      <!-- Definindo o cabeçalho e linhas da tabela -->
+      <tr mat-header-row *matHeaderRowDef="['id', 'nome', 'endereco', 'acoes']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['id', 'nome', 'endereco', 'acoes'];"></tr>
+    </table>
+  </div>
+</div>
