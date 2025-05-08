@@ -33,6 +33,10 @@ import { PlanosHomeComponent } from './pages/planos-home/planos-home.component';
 import { FormPlanosComponent } from './components/form-planos/form-planos.component';
 import { CadastroPlanoComponent } from './pages/cadastro-plano/cadastro-plano.component';
 import { EditarPlanoComponent } from './pages/editar-plano/editar-plano.component';
+import { AssistenciasHomeComponent } from './pages/assistencias-home/assistencias-home.component';
+import { FormAssistenciasComponent } from './components/form-assistencias/form-assistencias.component';
+import { CadastroAssistenciaComponent } from './pages/cadastro-assistencia/cadastro-assistencia.component';
+import { EditarAssistenciaComponent } from './pages/editar-assistencia/editar-assistencia.component';
 
 
 @NgModule({
@@ -52,7 +56,9 @@ import { EditarPlanoComponent } from './pages/editar-plano/editar-plano.componen
     PlanosHomeComponent,
     CadastroPlanoComponent,
     EditarPlanoComponent,
-     // ✅ Agora está no lugar certo
+    AssistenciasHomeComponent,
+    CadastroAssistenciaComponent,
+    EditarAssistenciaComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,6 +76,7 @@ import { EditarPlanoComponent } from './pages/editar-plano/editar-plano.componen
     RouterLink,
     FormEmpresasComponent,
     FormPlanosComponent,
+    FormAssistenciasComponent,
   ],
   providers: [
     provideClientHydration(withEventReplay())

@@ -27,10 +27,6 @@ export class CadastroVeiculoComponent {
     this.router.navigate(['/veiculos-home']);
   });
 
-//   this.veiculoService.CreateVeiculo(VeiculoService).subscribe((data) => { 
-//     this.router.navigate(['/veiculo-home']);
-
-// });
 }
 
 }

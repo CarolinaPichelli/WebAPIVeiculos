@@ -1,0 +1,9 @@
+<div *ngIf="assistencia">
+    <app-form-assistencias
+      [btnAcao]="btnAcao"
+      [btnTitulo]="btnTitulo"
+      [dadosAssistencia]="assistencia"
+      (onSubmit)="formularioAssistencia.setValue($event); submit()">
+    </app-form-assistencias>
+  </div>
+  

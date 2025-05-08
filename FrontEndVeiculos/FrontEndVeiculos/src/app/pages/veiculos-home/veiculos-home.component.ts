@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { VeiculoService } from '../../services/veiculo.service'; // Corrigido o nome para UserService
+import { Component } from '@angular/core';
+import { VeiculoService } from '../../services/veiculo.service'; 
 import { Veiculo } from '../../models/veiculos';
 import { MatDialog } from '@angular/material/dialog';
-// import { ExcluirComponent } from '../../componentes/excluir/excluir.component';
 
 @Component({
   selector: 'app-veiculos-home',
@@ -15,10 +14,7 @@ export class VeiculosHomeComponent {
   veiculosGeral: Veiculo[] = []; 
   veiculoId!: number;
 
-  constructor(private veiculoService: VeiculoService, public dialog: MatDialog) { 
-    // Inicializa o array de usuários
-
-  }
+  constructor(private veiculoService: VeiculoService, public dialog: MatDialog) { }
   ngOnInit(): void {
     
     this.veiculoService.GetVeiculos().subscribe(data => {

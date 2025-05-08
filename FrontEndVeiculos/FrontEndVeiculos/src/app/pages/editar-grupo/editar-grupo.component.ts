@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { VeiculoService } from '../../services/veiculo.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Veiculo } from '../../models/veiculos';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Grupo } from '../../models/grupos';
 import { GrupoService } from '../../services/grupo.service';
@@ -30,11 +28,9 @@ export class EditarGrupoComponent {
     // Recuperando o id da rota para buscar o grupo
     const grupoId = Number(this.route.snapshot.paramMap.get('id'));
     this.inicializarFormulario();
-
-    // Buscando o veículo pelo id
     this.grupoService.GetGrupoById(grupoId).subscribe({
       next: (dados) => {
-        this.grupo = dados;  // Atribuindo os dados do veículo
+        this.grupo = dados;  
         this.formularioGrupo.patchValue(dados);  // Preenchendo o formulário com os dados
       },
       error: (err) => console.error('Erro ao buscar o grupo:', err)
@@ -55,8 +51,6 @@ export class EditarGrupoComponent {
         console.error("Grupo não carregado.");
         return;  
       }
-      
-      // Usando o id do veículo corretamente
       this.grupoService.UpdateGrupo(this.grupo.id!, this.formularioGrupo.value).subscribe({
         next: () => this.router.navigate(['/grupos-home']),
         error: (err) => console.error('Erro ao atualizar grupo:', err)

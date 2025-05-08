@@ -32,7 +32,7 @@ export class EditarPlanoComponent {
     // Buscando o veículo pelo id
     this.planoService.GetPlanoById(planoId).subscribe({
       next: (dados) => {
-        this.plano = dados;  // Atribuindo os dados do veículo
+        this.plano = dados;  
         this.formularioPlano.patchValue(dados);  // Preenchendo o formulário com os dados
       },
       error: (err) => console.error('Erro ao buscar plano:', err)

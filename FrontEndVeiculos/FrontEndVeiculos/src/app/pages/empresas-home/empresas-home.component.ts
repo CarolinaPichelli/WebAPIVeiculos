@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Grupo } from '../../models/grupos';
-import { GrupoService } from '../../services/grupo.service';
 import { MatDialog } from '@angular/material/dialog';
 import { Empresa } from '../../models/empresas';
 import { EmpresaService } from '../../services/empresa.service';
@@ -21,8 +19,8 @@ export class EmpresasHomeComponent {
   ngOnInit(): void {
     
     this.empresaService.GetEmpresas().subscribe(data => {
-      this.empresas = data;
-      this.empresasGeral = data;
+    this.empresas = data;
+    this.empresasGeral = data;
 
   });
 
@@ -32,7 +30,6 @@ export class EmpresasHomeComponent {
   this.empresaService.DeleteEmpresa(this.empresaId).subscribe({
     next: () => {
       console.log('Empresa excluída com sucesso!');
-      // Remover o veículo da lista ou redirecionar, conforme necessário
       this.empresas = this.empresas.filter(grupo => grupo.id !== this.empresaId);
     },
     error: (err) => console.error('Erro ao excluir empresa:', err)
@@ -43,7 +40,6 @@ export class EmpresasHomeComponent {
 openDeleteModal(empresaId: number): void {
   this.empresaId = empresaId;
 }
-
 }
 
   

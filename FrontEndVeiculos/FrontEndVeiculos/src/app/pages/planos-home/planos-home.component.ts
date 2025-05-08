@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PlanoService } from '../../services/plano.service'; // Corrigido o nome para UserService
+import { PlanoService } from '../../services/plano.service';
 import { Plano } from '../../models/planos';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -15,10 +15,7 @@ export class PlanosHomeComponent implements OnInit{
   planosGeral: Plano[] = []; 
   planoId!: number;
 
-  constructor(private planoService: PlanoService, public dialog: MatDialog) { 
-    // Inicializa o array de usuários
-
-  }
+  constructor(private planoService: PlanoService, public dialog: MatDialog) { }
   ngOnInit(): void {
     
     this.planoService.GetPlanos().subscribe(data => {

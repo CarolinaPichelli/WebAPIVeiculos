@@ -7,6 +7,18 @@
       "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\dtos\\planoassistenciadto\\planoassistenciadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|c:\\users\\timeware73\\desktop\\webapiveiculos\\webapiveiculos\\webapiveiculos\\services\\planoassistenciaservice\\planoassistenciaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\services\\planoassistenciaservice\\planoassistenciaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|c:\\users\\timeware73\\desktop\\webapiveiculos\\webapiveiculos\\webapiveiculos\\services\\planoassistenciaservice\\iplanoassistenciaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\services\\planoassistenciaservice\\iplanoassistenciaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|c:\\users\\timeware73\\desktop\\webapiveiculos\\webapiveiculos\\webapiveiculos\\controllers\\planoassistenciacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\controllers\\planoassistenciacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|c:\\users\\timeware73\\desktop\\webapiveiculos\\webapiveiculos\\webapiveiculos\\dtos\\empresaassistenciadto\\empresaassistenciadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\dtos\\empresaassistenciadto\\empresaassistenciadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,14 +43,6 @@
       "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\services\\veiculoservice\\veiculoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|c:\\users\\timeware73\\desktop\\webapiveiculos\\webapiveiculos\\webapiveiculos\\services\\planoassistenciaservice\\iplanoassistenciaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\services\\planoassistenciaservice\\iplanoassistenciaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|c:\\users\\timeware73\\desktop\\webapiveiculos\\webapiveiculos\\webapiveiculos\\services\\planoassistenciaservice\\planoassistenciaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\services\\planoassistenciaservice\\planoassistenciaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|c:\\users\\timeware73\\desktop\\webapiveiculos\\webapiveiculos\\webapiveiculos\\services\\veiculoservice\\iveiculoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B454FD11-F860-4CDB-A32D-9B0188FB2357}|WebApiVeiculos\\WebApiVeiculos.csproj|solutionrelative:webapiveiculos\\services\\veiculoservice\\iveiculoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -50,8 +54,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlanoAssistenciaController.cs",
+              "DocumentMoniker": "C:\\Users\\Timeware73\\Desktop\\WebAPIVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Controllers\\PlanoAssistenciaController.cs",
+              "RelativeDocumentMoniker": "WebApiVeiculos\\Controllers\\PlanoAssistenciaController.cs",
+              "ToolTip": "C:\\Users\\Timeware73\\Desktop\\WebAPIVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Controllers\\PlanoAssistenciaController.cs",
+              "RelativeToolTip": "WebApiVeiculos\\Controllers\\PlanoAssistenciaController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAA9wBMAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T13:28:41.024Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -67,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "EmpresaAssistenciaDTO.cs",
               "DocumentMoniker": "C:\\Users\\Timeware73\\Desktop\\WebAPIVeiculos\\WebApiVeiculos\\WebApiVeiculos\\DTOs\\EmpresaAssistenciaDTO\\EmpresaAssistenciaDTO.cs",
               "RelativeDocumentMoniker": "WebApiVeiculos\\DTOs\\EmpresaAssistenciaDTO\\EmpresaAssistenciaDTO.cs",
@@ -79,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "VeiculoDTO.cs",
               "DocumentMoniker": "C:\\Users\\Timeware73\\Desktop\\WebAPIVeiculos\\WebApiVeiculos\\WebApiVeiculos\\DTOs\\VeiculoDTO\\VeiculoDTO.cs",
               "RelativeDocumentMoniker": "WebApiVeiculos\\DTOs\\VeiculoDTO\\VeiculoDTO.cs",
@@ -91,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "GrupoVeiculoDTO.cs",
               "DocumentMoniker": "C:\\Users\\Timeware73\\Desktop\\WebAPIVeiculos\\WebApiVeiculos\\WebApiVeiculos\\DTOs\\GrupoVeiculoDTO\\GrupoVeiculoDTO.cs",
               "RelativeDocumentMoniker": "WebApiVeiculos\\DTOs\\GrupoVeiculoDTO\\GrupoVeiculoDTO.cs",
@@ -103,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "GrupoVeiculoModel.cs",
               "DocumentMoniker": "C:\\Users\\Timeware73\\Desktop\\WebAPIVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Models\\GrupoVeiculoModel.cs",
               "RelativeDocumentMoniker": "WebApiVeiculos\\Models\\GrupoVeiculoModel.cs",
@@ -115,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Timeware73\\Desktop\\WebAPIVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Program.cs",
               "RelativeDocumentMoniker": "WebApiVeiculos\\Program.cs",
@@ -127,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "IPlanoAssistenciaService.cs",
               "DocumentMoniker": "C:\\Users\\Timeware73\\Desktop\\WebAPIVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Services\\PlanoAssistenciaService\\IPlanoAssistenciaService.cs",
               "RelativeDocumentMoniker": "WebApiVeiculos\\Services\\PlanoAssistenciaService\\IPlanoAssistenciaService.cs",
@@ -139,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "IVeiculoService.cs",
               "DocumentMoniker": "C:\\Users\\Timeware73\\Desktop\\WebAPIVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Services\\VeiculoService\\IVeiculoService.cs",
               "RelativeDocumentMoniker": "WebApiVeiculos\\Services\\VeiculoService\\IVeiculoService.cs",
@@ -151,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "VeiculoService.cs",
               "DocumentMoniker": "C:\\Users\\Timeware73\\Desktop\\WebAPIVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Services\\VeiculoService\\VeiculoService.cs",
               "RelativeDocumentMoniker": "WebApiVeiculos\\Services\\VeiculoService\\VeiculoService.cs",
@@ -163,13 +179,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "PlanoAssistenciaService.cs",
               "DocumentMoniker": "C:\\Users\\Timeware73\\Desktop\\WebAPIVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Services\\PlanoAssistenciaService\\PlanoAssistenciaService.cs",
               "RelativeDocumentMoniker": "WebApiVeiculos\\Services\\PlanoAssistenciaService\\PlanoAssistenciaService.cs",
               "ToolTip": "C:\\Users\\Timeware73\\Desktop\\WebAPIVeiculos\\WebApiVeiculos\\WebApiVeiculos\\Services\\PlanoAssistenciaService\\PlanoAssistenciaService.cs",
               "RelativeToolTip": "WebApiVeiculos\\Services\\PlanoAssistenciaService\\PlanoAssistenciaService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAcwAgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T11:30:05.852Z"
             }

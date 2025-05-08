@@ -10,10 +10,12 @@ import { EditarGrupoComponent } from './pages/editar-grupo/editar-grupo.componen
 import { EmpresasHomeComponent } from './pages/empresas-home/empresas-home.component';
 import { CadastroEmpresaComponent } from './pages/cadastro-empresa/cadastro-empresa.component';
 import { EditarEmpresaComponent } from './pages/editar-empresa/editar-empresa.component';
-import { PlanoService } from './services/plano.service';
 import { PlanosHomeComponent } from './pages/planos-home/planos-home.component';
 import { CadastroPlanoComponent } from './pages/cadastro-plano/cadastro-plano.component';
 import { EditarPlanoComponent } from './pages/editar-plano/editar-plano.component';
+import { AssistenciasHomeComponent } from './pages/assistencias-home/assistencias-home.component';
+import { CadastroAssistenciaComponent } from './pages/cadastro-assistencia/cadastro-assistencia.component';
+import { EditarAssistenciaComponent } from './pages/editar-assistencia/editar-assistencia.component';
 
 const routes: Routes = [
   {path: "", component:HomeComponent},
@@ -33,6 +35,10 @@ const routes: Routes = [
   {path: "planos-home", component:PlanosHomeComponent},
   {path: "cadastro-plano", component:CadastroPlanoComponent},
   {path: "editar-plano/:id", component:EditarPlanoComponent},
+
+  {path: "assistencias-home", component:AssistenciasHomeComponent},
+  {path: "cadastro-assistencia", component:CadastroAssistenciaComponent},
+  {path: "editar-assistencia/:id", component:EditarAssistenciaComponent},
 ];
 
 @NgModule({

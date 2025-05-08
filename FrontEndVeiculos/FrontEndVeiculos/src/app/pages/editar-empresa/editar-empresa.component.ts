@@ -25,14 +25,11 @@ export class EditarEmpresaComponent {
   ) {}
 
   ngOnInit(): void {
-    // Recuperando o id da rota para buscar o grupo
     const empresaId = Number(this.route.snapshot.paramMap.get('id'));
     this.inicializarFormulario();
-
-    // Buscando o veículo pelo id
     this.empresaService.GetEmpresaById(empresaId).subscribe({
       next: (dados) => {
-        this.empresa = dados;  // Atribuindo os dados do veículo
+        this.empresa = dados;  
         this.formularioEmpresa.patchValue(dados);  // Preenchendo o formulário com os dados
       },
       error: (err) => console.error('Erro ao buscar a empresa:', err)

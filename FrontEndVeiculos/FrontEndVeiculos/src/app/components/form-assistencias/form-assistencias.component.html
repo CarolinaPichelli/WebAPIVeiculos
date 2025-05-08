@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>{{ btnTitulo }}</h1>
+  
+    <form *ngIf="formularioAssistencia" [formGroup]="formularioAssistencia" (ngSubmit)="submit()">
+  
+      <!-- Campo: veiculoId -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Identificador do veículo</mat-label>
+        <input matInput id="veiculoId" formControlName="veiculoId" placeholder="Digite o identificador do veículo" required>
+      </mat-form-field>
+  
+      <!-- Campo: planoId -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Identificador do plano</mat-label>
+        <input matInput id="planoId" formControlName="planoId" placeholder="Digite o identificador do plano" required>
+      </mat-form-field>
+  
+      <!-- Botões -->
+      <div class="action-buttons">
+        <button mat-raised-button color="primary" type="submit">{{ btnAcao }}</button>
+        <!-- <button mat-raised-button color="accent" type="button" routerLink="">Voltar</button> -->
+      </div>
+      
+    </form>
+  </div>
+  

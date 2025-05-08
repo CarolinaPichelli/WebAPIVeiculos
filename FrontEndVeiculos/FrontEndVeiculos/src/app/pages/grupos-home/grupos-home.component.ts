@@ -14,10 +14,7 @@ export class GruposHomeComponent {
   gruposGeral: Grupo[] = []; 
   grupoId!: number;
 
-  constructor(private grupoService: GrupoService, public dialog: MatDialog) { 
-    // Inicializa o array de usuários
-
-  }
+  constructor(private grupoService: GrupoService, public dialog: MatDialog) { }
   ngOnInit(): void {
     
     this.grupoService.GetGrupos().subscribe(data => {

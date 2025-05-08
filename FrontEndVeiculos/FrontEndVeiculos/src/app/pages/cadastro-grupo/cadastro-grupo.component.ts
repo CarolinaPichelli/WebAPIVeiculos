@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { Veiculo } from '../../models/veiculos';
 import { Router } from '@angular/router';
-import { VeiculoService } from '../../services/veiculo.service';
 import { GrupoService } from '../../services/grupo.service';
 import { Grupo } from '../../models/grupos';
 
@@ -27,12 +25,3 @@ export class CadastroGrupoComponent {
     });
   }
 }
-
-  
-
-
-
-
-
-
-
