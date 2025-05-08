@@ -4,7 +4,7 @@ API em **.NET** para gerenciar veículos, grupos de veículos, empresas, planos 
 
 ## Funcionalidades
 
-- CRUD de veículos, grupos veículos, empresas, planos e assistências.
+- CRUD de veículos, grupos de veículos, empresas, planos e assistências.
 - Persistência de dados no MySQL.
 
 ## Como Rodar
@@ -29,17 +29,13 @@ API em **.NET** para gerenciar veículos, grupos de veículos, empresas, planos 
 3. Crie o banco utilizando docker run:
 
 <pre>
-<code>
-docker run --name mysql-veiculos -e MYSQL_ROOT_PASSWORD=usuario -e MYSQL_DATABASE=veiculosdatabase -e MYSQL_USER=usuario -e MYSQL_PASSWORD=123456 -p 3307:3306 -d mysql:latest
-</code>
+<code>docker run --name mysql-veiculos -e MYSQL_ROOT_PASSWORD=usuario -e MYSQL_DATABASE=veiculosdatabase -e MYSQL_USER=usuario -e MYSQL_PASSWORD=123456 -p 3307:3306 -d mysql:latest</code>
 </pre>
 
 4. No diretório do front-end, executar no terminal:
 <pre>
-<code>
-npm install <br>
-ng serve
-</code>
+<code>npm install <br>
+ng serve</code>
 </pre>
 
 Após isso, você poderá acessar a aplicação localmente!
