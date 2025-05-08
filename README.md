@@ -13,8 +13,8 @@ API em **.NET** para gerenciar veículos, grupos de veículos, empresas, planos 
 
 - **.NET 6 ou superior**.
 - **MySQL**.
-- **Node.js** 
-- **Angular CLI** (instalar com `npm install -g @angular/cli`)
+- **Node.js**.
+- **Angular CLI** (instalar com `npm install -g @angular/cli`).
 
 ### Passos
 
